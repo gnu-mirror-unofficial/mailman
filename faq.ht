@@ -1,11 +1,13 @@
 Title: Mailman Frequently Asked Questions
 
+See also the <a href="http://www.python.org/cgi-bin/faqw-mm.py">Mailman
+FAQ Wizard</a> for more information.
+
  <h3>Mailman Frequently Asked Questions</h3>
 
 <b> Q. How do you spell this program?
 
-</b><br> See also <a href="http://www.python.org/cgi-bin/faqw-mm.py">http://www.python.org/cgi-bin/faqw-mm.py</a>
-<p> A. You spell it "Mailman", with a leading capital "M" and a lowercase
+</b><br> A. You spell it "Mailman", with a leading capital "M" and a lowercase
    second "m".  It is incorrect to spell it "MailMan" (i.e. you should
    not use StudlyCaps).
 <p> <b> Q. I'm getting really terrible performance for outgoing messages.  It
