@@ -2,6 +2,9 @@ Title: The Mailman Wishlist
 
 <h3> The Mailman Wishlist
 </h3>
+ <p>
+<h3> (Last Update: $Date: 2002/10/26 17:31:10 $)
+</h3>
  Here's the wish list for future versions of Mailman.  Many new
  features have been added to Mailman 2.1, so what's left will
  probably end up in a Mailman 3.0.
@@ -22,9 +25,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
 </ul>
 <h3> Documentation
@@ -41,9 +45,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -68,9 +73,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -102,9 +108,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -125,6 +132,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -145,6 +153,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
 </ul>
 <h3> List Membership
@@ -161,9 +179,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -184,6 +203,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -204,6 +224,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -234,9 +264,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -257,6 +288,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -277,6 +309,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -313,9 +355,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -336,6 +379,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -356,6 +400,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -398,9 +452,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -421,6 +476,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -441,6 +497,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -493,9 +559,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -516,6 +583,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -536,6 +604,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -599,9 +677,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -622,6 +701,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -642,6 +722,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -708,9 +798,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -731,6 +822,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -751,6 +843,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -809,6 +911,8 @@ Title: The Mailman Wishlist
     <li> optional form front-end to public interfaces as a filter to address harvesters.
 
     <li> In general the whole Pipermail subsystem needs a good rewrite.
+    <li> Write an API between Mailman and the archiver so that message footers can contain the URL to the archived message.
+
 </ul>
 <h3> Code cleanup
 </h3>
@@ -824,9 +928,10 @@ Title: The Mailman Wishlist
     <li> For low-traffic sites, a queued message could trigger a qrunner process.  It would work until all mail was delivered, then sleep
  and exit if no new work arrived.
 
-    <li> We could get rid of the wrappers by doing a file delivery at the aliases, then having qrunner use UnixMailbox to deliver each
- message.  There would have to be some locking between the MTA
- and Mailman.
+    <li> Strip any addresses of members who have nodupe turned on, from the Cc headers of the list copy of a message.
+
+    <li> Separate processing for MIME and plaintext digests.  E.g. you might want to filter images out of plaintext but not MIME
+ digests.
 
     <li> A detailed feature list
     <li> A user's guide
@@ -847,6 +952,7 @@ Title: The Mailman Wishlist
  message was edited by the moderator).
 
     <li> Allow the admin to disable option settings by users
+    <li> Allow admins to block nomail settings
     <li> Allow admins to control and set individual headers, adding, removing, or overriding those in the original message (sometimes
  very useful, but could be dangerous!)
 
@@ -867,6 +973,16 @@ Title: The Mailman Wishlist
  some period of time) and discard it.  The admin should be able
  to see all these super-quarantined messages with the flip of a
  button.
+
+    <li> Add a moderation option to pass through any message which is a reply to a message previously distributed through the list, even
+ if it comes from a non-member.  Treat that non-member as a
+ member for the duration of the thread.  Use In-Reply-To,
+ References and Message-ID to match these up.
+
+    <li> When a held message is forwarded (for admin editing and approved resend) there should be a way to auto-discard the held message
+ when the approved resend is received.
+
+    <li> Have an option to sort the list of members by real name or email address.
 
     <li> Have one account per user per site, with multiple email addresses and fallbacks.  Allow them to subscribe whichever
  address they want to whichever list, with different options per
@@ -925,6 +1041,8 @@ Title: The Mailman Wishlist
     <li> optional form front-end to public interfaces as a filter to address harvesters.
 
     <li> In general the whole Pipermail subsystem needs a good rewrite.
+    <li> Write an API between Mailman and the archiver so that message footers can contain the URL to the archived message.
+
     <li> Turn all remaining string exceptions into class exceptions
     <li> Unit and system test suite! (ongoing)
 </ul>
