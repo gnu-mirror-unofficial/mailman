@@ -1,13 +1,10 @@
 """Generator for the Mailman on-line documentation.
 
-Requires ht2html.py, available from
-
-http://www.wooz.org/users/barry/software/pyware.html
+Requires ht2html.py, available from http://ht2html.sourceforge.net
 """
 
-import time
 import os
-import re
+import time
 
 from Skeleton import Skeleton
 from Sidebar import Sidebar, BLANKCELL
@@ -15,27 +12,16 @@ from Banner import Banner
 from HTParser import HTParser
 from LinkFixer import LinkFixer
 
-COMMA = ','
-
 
 
 sitelinks = [
     # Row 1
-    ('%(rootdir)s/index.html',  'Home'),
-    ('%(rootdir)s/users.html',  'Users'),
-    ('http://www.list.org/',    'List.Org'),
-    # Row 2
-    ('%(rootdir)s/install-start.html',                   'Installation'),
-    ('%(rootdir)s/mgrs.html',                            'List Managers'),
-    ('http://www.gnu.org/software/mailman/mailman.html', 'Mailman at GNU'),
-    # Row 3
-    ('%(rootdir)s/faq.html',    'FAQ'),
-    ('%(rootdir)s/admins.html', 'Site Administrators'),
-    ('http://www.python.org/',  'Python.Org'),
-    # Row 4
-    ('%(rootdir)s/lists.html',  'Discussion Lists'),
-    ('%(rootdir)s/devs.html',   'Developers'),
-    ('http://www.gnu.org/',     'Gnu.Org'),
+    ('%(rootdir)s/index.html',    'Home'),
+    ('%(rootdir)s/docs.html',     'Documentation'),
+    ('%(rootdir)s/lists.html',    'Mailing lists'),
+    ('%(rootdir)s/help.html',     'Help'),
+    ('%(rootdir)s/download.html', 'Download'),
+    ('%(rootdir)s/devs.html',     'Developers'),
     ]
 
 
@@ -53,25 +39,20 @@ class MMGenerator(Skeleton, Sidebar, Banner):
         self.__d = {'rootdir': rootdir}
         self.__linkfixer.massage(p.sidebar, self.__d)
         # tweak
-        p.sidebar.append((None, """\
-<center><a href="http://www.python.org/"><img border=0
-    src="%(rootdir)s/images/PythonPoweredSmall.png"></a>&nbsp;<a
-    href="http://sourceforge.net"><img
-    src="http://sourceforge.net/sflogo.php?group_id=103"
-    width="88" height="31" border="0"
-    alt="SourceForge Logo"></a>
-    """ % self.__d))
+        p.sidebar.append((None,
+                          '''<a href="http://www.python.org/"><img border=0
+                          src="%(rootdir)s/images/PythonPoweredSmall.png"
+                          ></a>&nbsp;<a href="http://sourceforge.net"><img 
+                          src="http://sourceforge.net/sflogo.php?group_id=103"
+                          width="88" height="31" border="0"
+                          alt="SourceForge Logo"></a>'''
+                          % self.__d))
         p.sidebar.append(BLANKCELL)
-        years = COMMA.join([str(x)
-                            for x in range(1998, time.localtime()[0]+1)])
-        copyright = self.__parser.get('copyright', years)
-        p.sidebar.append((None, '&copy; ' + copyright + """\
-<br>Free Software Foundation, Inc.<br>
-Verbatim copying and distribution of this entire article is permitted in
-any medium, provided this notice is preserved.<br>
-Please send comments on these pages to <a href="mailto:webmasters@gnu.org">
-&lt;webmasters@gnu.org&gt;</a>, other questions to <a
-href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
+        thisyear = time.localtime()[0]
+        copyright = self.__parser.get('copyright', '1998-%s' % thisyear)
+        p.sidebar.append((None, '&copy; ' + copyright + """
+Free Software Foundation, Inc.  Verbatim copying and distribution of this
+entire article is permitted in any medium, provided this notice is preserved.
 """))
         Sidebar.__init__(self, p.sidebar)
         #
@@ -96,19 +77,13 @@ href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
     % self.__d
 
     def get_corner_bgcolor(self):
-        return 'black'
+        return 'white'
 
     def get_banner(self):
         return Banner.get_banner(self)
 
     def get_title(self):
-        title = self.__parser.get('title')
-        return title + ' - GNU Project - Free Software Foundation (FSF)'
-
-    def get_meta(self):
-        skel = Skeleton.get_meta(self)
-        extra = '\n<LINK REV="made" HREF="mailto:webmasters@www.gnu.org">'
-        return skel + extra
+        return self.__parser.get('title')
 
     def get_sidebar(self):
         return Sidebar.get_sidebar(self)
@@ -123,8 +98,13 @@ href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
 
     def get_lightshade(self):
         """Return lightest of 3 color scheme shade."""
-        return '#99997c'
+        # The Mailman logo's foreground is approximately #da7074
+        #return '#99997c'
+        #return '#a39c82'
+        #return '#caa08f'
+        return '#eecfa1'
 
     def get_darkshade(self):
         """Return darkest of 3 color scheme shade."""
-        return '#663300'
+        #return '#545454'
+        return '#36648b'
