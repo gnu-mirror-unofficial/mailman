@@ -1,275 +1,146 @@
+<!-- This is a boilerplate for the web pages used in the GNU project.
+     Please change it according to specifications                        -->
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <HTML>
-<!-- THIS PAGE IS AUTOMATICALLY GENERATED.  DO NOT EDIT. -->
-<!-- Tue Nov 27 17:26:44 2001 -->
-<!-- USING HT2HTML 1.2 -->
-<!-- SEE http://barry.wooz.org/software/ht2html -->
-<!-- User-specified headers:
-Title: Mailman, the GNU Mailing List Manager
-
--->
-
 <HEAD>
-<TITLE>Mailman, the GNU Mailing List Manager - GNU Project - Free Software
-Foundation (FSF)</TITLE>
+<TITLE>Mailman - GNU Project - Free Software Foundation (FSF)</TITLE>
 <LINK REV="made" HREF="mailto:webmasters@www.gnu.org">
-
 </HEAD>
-<BODY BGCOLOR="#ffffff" TEXT="#000000"
-      TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0"
-      LINK="#0000bb"  VLINK="#551a8b"
-      ALINK="#ff0000">
-<!-- start of page table -->
-<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0>
-<!-- start of banner row -->
-<TR>
-<!-- start of corner cells -->
-<TD WIDTH=150 VALIGN=CENTER BGCOLOR="black">
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#1F00FF" ALINK="#FF0000" VLINK="#9900DD">
+<H3>Mailman</H3>
+<!-- When using this boilerplate, remember to replace the "???" in both places above. -->
 
-<center>
-    <a href="./index.html">
-    <img border=0 src="./images/logo-70.jpg"></a></center> </TD>
-<TD WIDTH=15 BGCOLOR="#99997c">&nbsp;&nbsp;</TD><!--spacer-->
-<!-- end of corner cells -->
-<!-- start of banner -->
-<TD WIDTH="90%" BGCOLOR="#99997c">
-<!-- start of site links table -->
-<TABLE WIDTH="100%" BORDER=0
-CELLSPACING=0 CELLPADDING=0
-       COLS=3 ROWS=4 BGCOLOR="#ffffff">
-<TR>
-    <TD BGCOLOR="#99997c">
-<b>Home</b>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="./users.html">Users</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="http://www.list.org/">List.Org</a>
-    </TD>
-</TR><TR>
-    <TD BGCOLOR="#99997c">
-<a href="./install-start.html">Installation</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="./mgrs.html">List Managers</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="http://www.gnu.org/software/mailman/mailman.html">Mailman at GNU</a>
-    </TD>
-</TR><TR>
-    <TD BGCOLOR="#99997c">
-<a href="./faq.html">FAQ</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="./admins.html">Site Administrators</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="http://www.python.org/">Python.Org</a>
-    </TD>
-</TR><TR>
-    <TD BGCOLOR="#99997c">
-<a href="./lists.html">Discussion Lists</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="./devs.html">Developers</a>
-    </TD>
-    <TD BGCOLOR="#99997c">
-<a href="http://www.gnu.org/">Gnu.Org</a>
-    </TD>
-</TR>
-</TABLE><!-- end of site links table -->
+<!-- when you replace this graphics, make sure you change the link
+     to also point to the correct html page.
+     If you make a new graphics for this page, make sure it has
+     a corresponding entry in /graphics/graphics.html                     -->
+<A HREF="/graphics/dragonlogo.jpg"><IMG SRC="/graphics/dragonlogo.jpg"
+   ALT=" [Delivered by Mailman logo] "
+   WIDTH="247" HEIGHT="93">&nbsp; (jpeg 6k)</A>
+<!-- only english is available currently
+<P>[<A HREF="">French</A>|<A HREF="">Spanish</A>]
+<P> -->
+<HR>
+<P>
+<!-- Replace this list with the page's contents. -->
+<H4>Table of contents</H4>
+<UL>
+  <LI><A HREF="#introduction"
+	 NAME="TOCintroduction">Introduction to Mailman</A>
+  <LI><A HREF="#downloading"
+	 NAME="TOCdownloading">Downloading Mailman</A>
+  <li><a href="#mailinglists"
+	 name="TOCmailinglists">Mailman Discussion Lists</a>
+</UL>
 
-</TD><!-- end of banner -->
-</TR><!-- end of banner row -->
-<TR><!-- start of sidebar/body row -->
-<!-- start of sidebar cells -->
-<TD WIDTH=150 VALIGN=TOP BGCOLOR="#99997c">
-<!-- start of sidebar table -->
-<TABLE WIDTH="100%" BORDER=0 CELLSPACING=0 CELLPADDING=3
-       BGCOLOR="#ffffff">
-<TR><TD BGCOLOR="#663300"><B><FONT COLOR="#ffffff">
-Overview
-</FONT></B></TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<a href="MM21/index.html"><b>Mailman 2.1 info</b>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<b>Home</b>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="features.html">Features</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="download.html">Requirements, Download</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="install-start.html">Installation</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="lists.html">Discussion Lists</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="bugs.html">Bugs and Patches</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="faq.html">Frequently Asked Questions</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="inthenews.html">Mailman in Use</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="todo.html">Wishlist!</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">&nbsp;
-<TR><TD BGCOLOR="#663300"><B><FONT COLOR="#ffffff">
-Documentation
-</FONT></B></TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="users.html">Users</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="mgrs.html">List Managers</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="admins.html">Site&nbsp;Administrators</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="devs.html">Developers</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="otherdocs.html">Other Documentation</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">&nbsp;
-<TR><TD BGCOLOR="#663300"><B><FONT COLOR="#ffffff">
-Exits
-</FONT></B></TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="http://www.python.org/">Python</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="http://www.gnu.org/">GNU/FSF</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="http://www.gnu.org/software/mailman/mailman.html">Mailman&nbsp;at&nbsp;GNU</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="http://www.list.org/">List.Org&nbsp;mirror</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="http://www.wooz.org/barry/">Barry Warsaw</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">&nbsp;
-<TR><TD BGCOLOR="#663300"><B><FONT COLOR="#ffffff">
-Email Us
-</FONT></B></TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<A HREF="mailto:mailman-users@python.org">mailman-users@python.org</A>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-&nbsp;
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-<a href="http://www.python.org/"><img border=0
-                          src="./images/PythonPoweredSmall.png"
-                          ></a>&nbsp;<a href="http://sourceforge.net"><img 
-                          src="http://sourceforge.net/sflogo.php?group_id=103"
-                          width="88" height="31" border="0"
-                          alt="SourceForge Logo"></a>
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-&nbsp;
-</TD></TR>
-<TR><TD BGCOLOR="#99997c">
-&copy; 1998,1999,2000,2001<br>Free Software Foundation, Inc.<br>
-Verbatim copying and distribution of this entire article is permitted in
-any medium, provided this notice is preserved.<br>
-Please send comments on these pages to <a
-href="mailto:webmasters@gnu.org">&lt;webmasters@gnu.org&gt;</a>, other
-questions to <a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
-</TD></TR>
-</TABLE><!-- end of sidebar table -->
+<P>
+<H4><A HREF="#TOCintroduction"
+       NAME="introduction">Introduction to Mailman</A></H4>
+<P>
+Mailman is software to help manage email discussion lists, much like
+Majordomo and Smartmail. Unlike most similar products, Mailman gives
+each mailing list a web page, and allows users to subscribe,
+unsubscribe, etc. over the web.  Even the list manager can administer
+his or her list entirely from the web.  Mailman also integrates most
+things people want to do with mailing lists, including archiving,
+mail-to-news gateways, integrated bounce handling, spam prevention,
+email-based admin commands, direct SMTP delivery (with fast bulk
+mailing), support for virtual domains, and more.
 
-</TD>
-<TD WIDTH=15>&nbsp;&nbsp;</TD><!--spacer-->
-<!-- end of sidebar cell -->
-<!-- start of body cell -->
-<TD VALIGN=TOP WIDTH="90%"><BR>
+<p>
+Mailman runs on most Un*x-like systems, is compatible with most web
+servers and browsers, and most SMTP servers.  Mailman requires
+<a href="http://www.python.org/">Python version 1.5 or newer</a>.
+Python is a free object-oriented scripting language.  A few files are
+written in C for security purposes.
 
-<h3>Mailman, the GNU Mailing List Manager</h3>
+<p>The manual is still only a set of READMEs provided in the Mailman
+distribution.  For now, more information can be found at
+<a href="http://www.list.org/">www.list.org</a>.
 
-Mailman is software to help manage electronic mail discussion lists,
-much like Majordomo or Smartmail.  Mailman gives each mailing list a
-unique web page and allows users to subscribe, unsubscribe, and change
-their account options over the web.  Even the list manager can
-administer his or her list entirely via the web.  Mailman has most of
-the features that people want in a mailing list management system,
-including built-in archiving, mail-to-news gateways, spam filters,
-bounce detection, digest delivery, and so on.  See the
-<a href="features.html">features page</a> for more detail.
+<P>
+<HR>
+<P>
+<H4><A HREF="#TOCdownloading" NAME="downloading">Downloading Mailman</A></H4>
+<P>
+Mailman can be found on
+<A HREF="ftp://ftp.gnu.org/gnu/mailman/">ftp://ftp.gnu.org/gnu/mailman/</A>
+or one of <A HREF="/prep/ftp.html">the mirrors</A>.
+<P>
 
-<p>Mailman is free software.  It is distributed under the
-<a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public
-License</a>.  The canonical Mailman home page is at
-<a href="http://www.gnu.org/software/mailman/mailman.html">
-www.gnu.org/software/mailman/mailman.html</a>, with more information
-available at <a href="http://www.list.org/">www.list.org</a>.  Mailman
-is written in the <a href="http://www.python.org/">Python</a>
-programming language, with a little bit of C code for security.
+<p>
+<HR>
+<P>
+<H4><a href="#TOCmailinglists" NAME="mailinglists">Mailman Discussion
+Lists</a></h4>
 
-<p>By the way, the name of this software is spelled <em>Mailman</em>
-with a capital leading <em>M</em> and a lowercase second <em>m</em>.
-It is incorrect to spell it "MailMan" (i.e. you should not use
-StudlyCaps).
+<p>
+There are several mailing lists devoted to Mailman, which also provide
+nice demonstrations of Mailman!
 
-<h3>Acknowledgements</h3>
+<ul>
+<li><a href="http://www.python.org/mailman/listinfo/mailman-announce">
+    Mailman Announce</a> is a read-only list that you can subscribe to 
+    if you are only interested in release notices and other important
+    news.  Only the core Mailman developers can post messages to this
+    list.
 
-<p>Mailman is brought to you by the <em>Mailman Cabal</em>, currently
-composed of the following core developers:
-<a href="http://www.wooz.org/barry/">Barry Warsaw</a>, Harald
-Meland, Ken Manheimer, Scott Cotton, and John Viega.  Mailman was
-originally written by John Viega.
+<p><li><a href="http://www.python.org/mailman/listinfo/mailman-users">
+    Mailman Users</a> is the mailing list to subscribe to if you are
+    using Mailman at your site, and may have problems or questions
+    relating to installation, use, etc.  We'll try to keep the deep
+    technical discussions off this list.
 
-<p>The Cabal would like to thank the following other developers for
-their important contributions (in no particular order): Juan Carlos
-Rey Anaya, Victoriano Giralt, Mads Kiilerich, The Dragon De Monsyne,
-Timothy O'Malley, Balazs Nagy, Michael Mclay, Greg Stein, Gergely
-Madarasz, Andrew Kuchling, Jeff Hahn, Paul Hebble, Christopher
-P. Lindsey, Chris Kolar, J C Lawrence, Jeremy Hylton, Nigel
-Metheringham, Dan Mick, Jim Tittsler, Ricardo Kustner, Bernhard
-Reiter, Thomas Wouters, Jeff Berliner, Ted Cabeen, Michael Yount, Ron
-Jarrell, Chris Snell, David Champion, Darrell Fuhriman, Owen Taylor,
-Fil, Noam Zeilberger, Mark MERLIN, John A. Martin, Erik Forsberg,
-Tanner Lovelace.
-<em>We have a extensive wish list and welcome anyone else who would
-like to contribute!</em>
+<p><li><a href="http://www.python.org/mailman/listinfo/mailman-developers">
+    Mailman Developers</a> is the mailing list to use if you are
+    interested in helping us develop Mailman, discuss future
+    directions, etc.  This is the list for more in-depth technical
+    issues.
 
-<h3>Papers</h3>
+<p><li><a href="http://www.python.org/mailman/listinfo/mailman-checkins">
+    Mailman Checkins</a> is an adjunct list to the publically
+    accessible read-only CVS repository.  This list is for the
+    hardcore developers, or anybody else submitting patches, since we
+    really prefer such patches to be generated against the latest
+    snapshot.  This is a read-only list; only the core Mailman
+    developers can post messages to this list.  There is no archive.
+</ul>
 
-<p>A number of papers and other material presented at
-<a href="http://www.foretec.com/python/workshops/1998-11/proceedings.html">
-the 7th International Python Conference</a> and the 12th Usenix LISA
-conference are available <a href="mailman-docs.tar.gz">here</a>.
+<!--
+  * If needed, change the copyright block at the bottom. In general, all pages
+    on the GNU web server should have the section about verbatim copying. Please
+    do NOT remove this without talking with the webmasters first.
+-->
+<HR>
 
-<h3>Logos</h3>
+<!-- english only currently
+[<A HREF="">French</A>|<A HREF="">Spanish</A>]<P>
+-->
+Return to <A HREF="/home.html">GNU's home page</A>.
+<P>
 
-The Dragon De Monsyne created and donated two logos for Mailman which
-you can use to link back to the Mailman website.
+Please send FSF &amp; GNU inquiries &amp; questions to 
 
-<h3>Note</h3>
+<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
+There are also <A HREF="/home.html#ContactInfo">other ways to
+contact</A> the FSF.
+<P>
 
-Some minor editorial changes have been made to these pages by the gnu.org
-webmasters.  The changes were made with the approval of the GNU Mailman
-maintainers.
+Please send comments on these web pages to
 
-<table>
-<tr><td><img src="images/logo-sm.jpg"></td>
-    <td><img src="images/logo-lg.jpg"></td>
-</tr><tr><td><center>Small Logo (110x35)</center></td>
-	 <td><center>Large Logo (247x93)</center></td>
-</tr>
-</table>
-
-</TD><!-- end of body cell -->
-</TR><!-- end of sidebar/body row -->
-</TABLE><!-- end of page table -->
-</BODY></HTML>
+<A HREF="mailto:webmasters@gnu.org"><EM>webmasters@gnu.org</EM></A>,
+send other questions to
+<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
+<P>
+Copyright (C) 1999,2000 Free Software Foundation, Inc.,
+59 Temple Place - Suite 330, Boston, MA  02111,  USA
+<P>
+Verbatim copying and distribution of this entire article is
+permitted in any medium, provided this notice is preserved.<P>
+Updated:
+<!-- hhmts start -->
+Last modified: Sun Mar 19 22:31:49 EST 2000
+<!-- hhmts end -->
+<HR>
+</BODY>
+</HTML>
