@@ -48,7 +48,7 @@ Project</a> for future language support.
 
 <dl>
     <p><dt><b>Catalan</b></dt>
-    <dd><a href="mailto:jordi@debian.org">Jordi Mallach</a> is heading
+    <dd><a href="mailto:toni.panades@partal.com">Toni Panades</a> is heading
     up the Catalan translation effort.
 
     <p><dt><b>Chinese</b> Simplified (GB), and Big5</dt>
@@ -128,14 +128,13 @@ Project</a> for future language support.
     </dd>
 
     <p><dt><b>Polish</b></dt>
-    <dd>Contrary to what you might think knowing my last name, I don't
-    know a word of Polish. :)  Fortunately,
+    <dd>Polish translations have been contributed by
+    <a href="mailto:sawickib@iem.pw.edu.pl">Bartosz Sawicki</a> with
+    help from the rest of the translation team:
     <a href="mailto:Pawel.Kolodziejczyk@comarch.pl">Pawel
     Kolodziejczyk</a>, <a href="mailto:wanted@mwd.pl">Marcin
     Sochacki</a>, and
-    <a href="mailto:m.zaborowski@il.pw.edu.pl">Marcin Zaborowski</a>
-    have volunteered to spearhead the Polish
-    translations.
+    <a href="mailto:m.zaborowski@il.pw.edu.pl">Marcin Zaborowski</a>.
 
     <p><dt><b>Portuguese</b></dt>
     <dd>The following folks are working on the Portuguese
@@ -149,7 +148,7 @@ Project</a> for future language support.
     <li><a href="mailto:aleck@unesp.br">Aleck Zander</a>
     <li><a href="mailto:joseroberto@dicaslinux.com.br">Jose Roberto Kerne</a>.
     </ul>
-    They are working on both the Brazilian (pt_BR) and Portuguese (pt_PT)
+    They are working on both the Brazilian (pt_BR) and Portuguese (pt)
     translations, with help from <a href="mailto:moitinho@civil.ist.utl.pt"
     >Jose Paulo Moitinho de Almeida</a>.
 
@@ -171,6 +170,10 @@ Project</a> for future language support.
     <p><dt><b>Turkish</b></dt>
     <dd><a href="mailto:eguler@aegee.metu.edu.tr">Erdinc Guler</a>
     heads up the Turkish translation effort.
+
+    <p><dt><b>Ukrainian</b></dt>
+    <dd><a href="mailto:miroslav@ichistory.org">Miroslav Ris</a> heads
+    up the Ukrainian translations.
 
 </dl>
 
