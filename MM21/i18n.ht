@@ -78,10 +78,12 @@ internationalized versions of Mailman.
     heads up the Finnish translation effort.
 
     <p><dt><b>French</b></dt>
-    <dd><a href="mailto:wilane@yahoo.com">Ousmane Wilane</a> heads up the
+    <dd><a href="mailto:george@lyon.inserm.fr">Pascal GEORGE</a> and
+    <a href="mailto:wilane@yahoo.com">Ousmane Wilane</a> head up the
     French translation effort, with a mailing list hosted by
     <a href="mailto:Fil@rezo.net">Fil</a> at
-    <a href="http://listes.rezo.net/mailman/listinfo/mailman-fr">http://listes.rezo.net/mailman/listinfo/mailman-fr</a>.
+    <a href="http://listes.rezo.net/mailman/listinfo/mailman-fr"
+    >http://listes.rezo.net/mailman/listinfo/mailman-fr</a>.
 
     <p><dt><b>German</b></dt>
     <dd><a href="mailto:p.heinlein@jpberlin.de">Peer Heinlein</a> is
@@ -110,6 +112,10 @@ internationalized versions of Mailman.
     <p><dt><b>Korean</b></dt>
     <dd><a href="mailto:song@yaimma.co.kr">song@yaimma.co.kr</a> has
     volunteered to head up the Korean translation effort.</dd>
+
+    <p><dt><b>Lithuanian</b></dt>
+    <dd><a href="mailto:mantas@akl.lt">Mantas Kriauciunas</a> has
+    contributed a Lithuanian translation.
 
     <p><dt><b>Norwegian</b></dt>
     <dd><a href="mailto:Daniel.Buchmann@bibsys.no">Daniel Buchmann</a>
