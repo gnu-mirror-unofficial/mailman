@@ -36,9 +36,9 @@ reporting suspected security vulnerabilities.
 <h3>Current Version</h3>
 
 The current stable GNU Mailman version is
-<!-VERSION--->2.1.7<!-VERSION--->,
+<!-VERSION--->2.1.8<!-VERSION--->,
 released on
-<!-DATE--->31-Dec-2005<!-DATE--->.
+<!-DATE--->15-Apr-2006<!-DATE--->.
 
 <h3>Acknowledgements</h3>
 
@@ -48,8 +48,8 @@ released on
 >barry at python dot org</a>.
 
 <p>Much thanks go to Mark Sapiro who was most active on incorporating 
-lots of bug fixes and patches for the 2.1.7 release as a cvs committer.
-Tokio Kikuchi served as the release manager for the 2.1.6-7 releases.
+lots of bug fixes and patches for the 2.1.7-8 releases as a cvs committer.
+Tokio Kikuchi served as the release manager for the 2.1.6-8 releases.
 
 <p>Thanks go to
 <a href="http://www.control.com/">Control.com</a> for their
@@ -60,4 +60,3 @@ Corporation</a>, as well as the
 <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/mailman/mailman/ACKNOWLEDGMENTS?rev=HEAD&content-type=text/vnd.viewcvs-markup"
 >list of contributors</a>, bug hunters, big idea people, and others
 who have helped immensely with Mailman's development.
-t.
