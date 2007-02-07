@@ -32,7 +32,8 @@ is organized among the following audiences:
     documentation also gives some hints on how to tune Mailman for optimal
     performance.
 
-<p><li><a href="i18n.html"><b>Translators</b></a> -- anybody who is
+<p><li><a href="http://wiki.list.org/display/DEV/Internationalization"
+    ><b>Translators <em>(wiki)</em></b></a> -- anybody who is
     contributing to internationalization support for Mailman.  This
     describes contact addresses for the current language champions and
     tells you what you need to do if you want to contribute a new

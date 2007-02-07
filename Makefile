@@ -21,10 +21,10 @@ GENERATED_HTML= $(SOURCES:.ht=.html)
 
 all: $(TARGETS)
 
-faq.ht: ../../FAQ
+faq.ht: ../../docs/readmes/FAQ.txt
 	../bin/faq2ht.py $< $@
 
-todo.ht: ../../TODO
+todo.ht: ../../docs/readmes/TODO.txt
 	../bin/mm2do $< $@
 
 install:
