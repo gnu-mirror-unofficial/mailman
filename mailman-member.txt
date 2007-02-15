@@ -1,3 +1,4 @@
+
    #GNU Mailman - List Member Manual Contents About this document...
    About this document...
 
@@ -11,7 +12,7 @@ GNU Mailman - List Member Manual
    terri(at)zone12.com
 
    Release 2.1
-   December 13, 2004
+   February 14, 2007
 
                                  Front Matter
 
@@ -1277,7 +1278,7 @@ option)
 
                             About this document ...
 
-   GNU Mailman - List Member Manual, December 13, 2004, Release 2.1
+   GNU Mailman - List Member Manual, February 14, 2007, Release 2.1
 
    This document was generated using the LaTeX2HTML translator.
 
@@ -1294,4 +1295,4 @@ option)
    Previous Page Up One Level Next Page GNU Mailman - List Member Manual
      _________________________________________________________________
 
-   Release 2.1, documentation updated on December 13, 2004.
+   Release 2.1, documentation updated on February 14, 2007.

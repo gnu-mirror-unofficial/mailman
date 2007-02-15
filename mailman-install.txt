@@ -12,7 +12,7 @@ GNU Mailman - Installation Manual
    barry(at)python.org
 
    Release 2.1
-   December 13, 2005
+   February 14, 2007
 
                                  Front Matter
 
@@ -27,6 +27,9 @@ GNU Mailman - Installation Manual
 
                           1 Installation Requirements
 
+   Please note that the information on this page may be out of date.
+   Check for the latest installation information on the Mailman wiki.
+
    GNU Mailman works on most POSIX-based systems such as Unix, MacOSX, or
    GNU/Linux. It does not currently work on Windows. You must have a mail
    server that you can send messages to, and a web server that supports
@@ -35,12 +38,11 @@ GNU Mailman - Installation Manual
    fine.
 
    To install Mailman from source, you will need an ANSI C compiler to
-   build Mailman's security wrappers. The GNU C compiler gcc 2.8.1 or
-   later is known to work well.
+   build Mailman's security wrappers. The GNU C compiler gcc works well.
 
    You must have the Python interpreter installed somewhere on your
-   system. Mailman 2.1 requires Python 2.1 or newer, although Python 2.3
-   or newer is recommended.
+   system. As of this writing, Python 2.4.4 is recommended, but see the
+   wiki page above for the latest information.
 
                              2 Set up your system
 
@@ -53,7 +55,7 @@ GNU Mailman - Installation Manual
    Mailman requires a unique user and group name which will own its
    files, and under which its processes will run. Mailman's basic
    security is based on group ownership permissions, so it's important to
-   get this step right1. Typically, you will add a new user and a new
+   get this step right^1. Typically, you will add a new user and a new
    group, both called mailman. The mailman user must be a member of the
    mailman group. Mailman will be installed under the mailman user and
    group, with the set-group-id (setgid) bit enabled.
@@ -79,7 +81,7 @@ GNU Mailman - Installation Manual
    the variable data files and install them in separate directories. This
    section will describe the available options.
 
-   The default is to install all of Mailman to /usr/local/mailman2. You
+   The default is to install all of Mailman to /usr/local/mailman^2. You
    can change this base installation directory (referred to here as
    $prefix) by specifying the directory with the --prefix configure
    option. If you're upgrading from a previous version of Mailman, you
@@ -93,7 +95,7 @@ GNU Mailman - Installation Manual
 
    Make sure the installation directory is set to group mailman (or
    whatever you're going to specify with --with-groupname) and has the
-   setgid bit set3. You probably also want to guarantee that this
+   setgid bit set^3. You probably also want to guarantee that this
    directory is readable and executable by everyone. For example, these
    shell commands will accomplish this:
 
@@ -838,8 +840,8 @@ GNU Mailman - Installation Manual
    server. Don't. The Sendmail.py module is misnamed - it's really a
    command line based message handoff scheme as opposed to the SMTP
    scheme used in SMTPDirect.py (the default). Sendmail.py has known
-   security holes and is provided as a proof-of-concept only4. If you are
-   having problems using SMTPDirect.py fix those instead of using
+   security holes and is provided as a proof-of-concept only^4. If you
+   are having problems using SMTPDirect.py fix those instead of using
    Sendmail.py, or you may open your system up to security exploits.
 
   6.3.1 Sendmail ``smrsh'' compatibility
@@ -1067,7 +1069,7 @@ fi
    Mailman has a large number of site-wide configuration options which
    you should now review and change according to your needs. Some of the
    options control how Mailman interacts with your environment, and other
-   options select defaults for newly created lists5. There are system
+   options select defaults for newly created lists^5. There are system
    tuning parameters and integration options.
 
    The full set of site-wide defaults lives in the
@@ -1265,7 +1267,7 @@ fi
    Also check for errors in your syslog files, your mail and web server
    log files and in Mailman's $prefix/logs/error file. If you're still
    having problems, you should send a message to the
-   mailman-users@python.org mailing list7; see
+   mailman-users@python.org mailing list^7; see
    http://mail.python.org/mailman/listinfo/mailman-users for more
    information.
 
@@ -1501,7 +1503,7 @@ tar xvf MailmanStartup.tar
 
                             About this document ...
 
-   GNU Mailman - Installation Manual, December 13, 2005, Release 2.1
+   GNU Mailman - Installation Manual, February 14, 2007, Release 2.1
 
    This document was generated using the LaTeX2HTML translator.
 
@@ -1517,24 +1519,24 @@ tar xvf MailmanStartup.tar
 
     Footnotes
 
-   ... right1
+   ... right^1
           You will be able to check and repair your permissions after
           installation is complete.
 
-   .../usr/local/mailman2
+   .../usr/local/mailman^2
           This is the default for Mailman 2.1. Earlier versions of
           Mailman installed everything under /home/mailman by default.
 
-   ... set3
+   ... set^3
           BSD users should see the 15.2 section for additional
           information.
 
-   ... only4
+   ... only^4
           In fact, in later versions of Mailman, this module is
           explicitly sabotaged. You have to know what you're doing in
           order to re-enable it.
 
-   ... lists5
+   ... lists^5
           In general, changing the list defaults described in this
           section will not affect any already created lists. To make
           changes after a list has been created, use the web interface or
@@ -1548,7 +1550,7 @@ tar xvf MailmanStartup.tar
           Changing the crontab could mess with other parallel Mailman
           installations.
 
-   ... list7
+   ... list^7
           You must subscribe to this mailing list in order to post to it,
           but the mailing list's archives are publicly visible.
      _________________________________________________________________
@@ -1556,4 +1558,4 @@ tar xvf MailmanStartup.tar
    Previous Page Up One Level Next Page GNU Mailman - Installation Manual
      _________________________________________________________________
 
-   Release 2.1, documentation updated on December 13, 2005.
+   Release 2.1, documentation updated on February 14, 2007.

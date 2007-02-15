@@ -12,8 +12,8 @@
 <link rel="next" href="node22.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name='aesop' content='information' />
-<title>7.2 ¿Cómo puedo evitar recibir mensajes duplicados? (opción
-duplicates) </title>
+<title>7.2 ¿Cómo puedo evitar recibir mensajes duplicados? (opción duplicates)
+</title>
 </head>
 <body>
 <DIV CLASS="navigation">
@@ -52,20 +52,21 @@ duplicates) </title>
 
 <H2><A NAME="SECTION002720000000000000000"></A><A NAME="sec:nodupes"></A>
 <BR>
-7.2 &#191;C&#243;mo puedo evitar recibir mensajes duplicados? (opci&#243;n
-duplicates) 
+7.2 &#191;C&#243;mo puedo evitar recibir mensajes duplicados? (opci&#243;n duplicates)
+
 </H2>
 
 <P>
-Mailman no puede impedir que usted reciba mensajes duplicados, pero puede
-ayudar.  Una situaci&#243;n habitual que hace que la gente reciba m&#250;ltiples copias
-de un correo se produce cuando un remitente usa la opci&#243;n ``responder a
-todos'' para enviar un mensaje de respuesta a la lista con copia a determinados
-destinatarios.  Si no desea recibir estos mensajes adicionales, se puede
-configurar Mailman para que revise y mire si su direcci&#243;n est&#225; en las l&#237;neas
-<span class="mailheader">To:</span> o <span class="mailheader">Cc:</span> del mensaje, de manera que s&#243;lo reciba la
-copia enviada por el remitente, y no una copia que haya sido alterada por
-Mailman (para incluir cabeceras y pi&#233;s, borrar archivos adjuntos, etc.).
+Mailman no puede impedir completamente que usted reciba mensajes duplicados,
+pero puede ayudar.  Una raz&#243;n com&#250;n para que la gente reciba m&#250;ltiples copias
+de un correo es que el remitente haya usado una funci&#243;n ``responder al grupo''
+para enviar correo tanto a la lista como a alg&#250;n n&#250;mero de individuos.  Si
+usted desea evitar recibir estos mensajes, se puede configurar Mailman para
+que revise y mire si usted est&#225; en las l&#237;neas <span class="mailheader">To:</span> o <span class="mailheader">Cc:</span>
+del mensaje.  Si su direcci&#243;n aparece ah&#237;, entonces se le puede indicar a
+Mailman que no le env&#237;e otra copia.  Esto significa que usted recibir&#225;
+solamente la copia enviada por el remitente, y no una copia que haya sido
+alterada por Mailman (incluir cabeceras y pi&#233;s, borrar adjuntos, etc.).
 
 <P>
 Para activar/desactivar esta opci&#243;n usando el interfaz web:
@@ -81,21 +82,21 @@ Para activar/desactivar esta opci&#243;n usando el interfaz web:
 </OL>
 
 <P>
-Esto tambi&#233;n se puede hacer con varias listas a la vez si usted est&#225; suscrito
-a m&#225;s de una lista en el mismo dominio.  Mire en la Secci&#243;n&nbsp;<A HREF="node34.html#sec:global">10.1</A>
-la informaci&#243;n sobre cambios globales de configuraci&#243;n. 
+Esto tambi&#233;n se puede cambiar para m&#250;ltiples listas al mismo tiempo si usted
+est&#225; suscrito a m&#225;s de una lista en el mismo dominio.  Mire en la
+Secci&#243;n&nbsp;<A HREF="node34.html#sec:global">10.1</A> la informaci&#243;n sobre cambios globales de configuraci&#243;n. 
 
 <P>
 Para activar/desactivar esto usando el interfaz de correo electr&#243;nico:
 
 <OL>
-<LI>Env&#237;e un mensaje a <span class="email">NOMBRELISTA-request@DOMINIO</span> con la orden
+<LI>Env&#237;e un correo a <span class="email">NOMBRELISTA-request@DOMINIO</span> con la orden
    <var>set&nbsp;duplicates&nbsp;on</var> o <var>set&nbsp;duplicates&nbsp;off</var>.
 
 <P>
-Las &#243;rdenes pueden aparecer tanto en el cuerpo como en el asunto
+Las &#243;rdenes pueden aparecer ya sea en el cuerpo o en la l&#237;nea de asunto
    del mensaje (mire en la Secci&#243;n&nbsp;<A HREF="node10.html#sec:email">3.2</A> m&#225;s informaci&#243;n sobre
-   env&#237;o de &#243;rdenes por correo). 
+   env&#237;o de &#243;rdenes de correo). 
 </LI>
 <LI>Seleccione ``on'' para recibir copias de los mensajes que ya le
    hayan enviado, seleccione ``off'' para evitar recibir esos duplicados.
@@ -137,7 +138,7 @@ Las &#243;rdenes pueden aparecer tanto en el cuerpo como en el asunto
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on 5 de enero 2007.</span>
+<span class="release-info">Release 2.1, documentation updated on 14 de febrero 2007.</span>
 </DIV>
 <!--End of Navigation Panel-->
 

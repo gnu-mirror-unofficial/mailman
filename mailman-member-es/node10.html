@@ -55,9 +55,9 @@
 
 <P>
 Toda lista de correo tiene un conjunto de direcciones de correo electr&#243;nico
-a las cuales se pueden enviar los mensajes, incluyendo, una direcci&#243;n
-para enviar los mensajes a la lista, una direcci&#243;n destinada a recibir 
-mensajes devueltos y direcciones para procesar &#243;rdenes de correo.
+a las cuales se pueden enviar los mensajes.  Siempre hay una direcci&#243;n
+para enviar los mensajes a la lista, una direcci&#243;n a a la cual se env&#237;an
+los mensajes devueltos y direcciones para procesar &#243;rdenes de correo.
 Para una lista de correo ficticia llamada
 <span class="email">milista@ejemplo.com</span>, usted encontrar&#237;a estas direcciones:
 
@@ -65,56 +65,55 @@ Para una lista de correo ficticia llamada
 
 <UL>
 <LI><span class="email">milista@ejemplo.com</span> - esta es la direcci&#243;n de correo que la gente
-      deber&#237;a usar para enviar mensajes a la lista.
+      deber&#237;a usar para los nuevos env&#237;os a la lista.
 
 <P>
 </LI>
 <LI><span class="email">milista-join@ejemplo.com</span> - enviando un mensaje a esta direcci&#243;n,
-      un nuevo miembro puede solicitar suscripci&#243;n a la lista, pero si se hace,
-      Mailman ignora tanto la cabecera de <span class="mailheader">Asunto:</span> como el cuerpo de 
-      tal mensaje.  Note que milista-subscribe@ejemplo.com es un alias para la 
-      direcci&#243;n -join.
+      un nuevo miembro puede solicitar suscripci&#243;n a la lista.  Tanto la cabecera
+      de <span class="mailheader">Asunto:</span> como el cuerpo de tal mensaje son ignorados.  Note
+      que milista-subscribe@ejemplo.com es un alias para la direcci&#243;n -join.
 
 <P>
 </LI>
 <LI><span class="email">milista-leave@ejemplo.com</span> - enviando un mensaje a esta direcci&#243;n
-      un miembro puede solicitar que se le d&#233; de baja de la lista.  Igual que con
-      la direcci&#243;n -join, se ignora la cabecera <span class="mailheader">Asunto:</span> y el cuerpo
-      del mensaje.  Note que milista-unsubscribe@ejemplo.com es un alias para
+      un miembro puede solicitar desuscripci&#243;n de la lista.  Igual que con la
+      direcci&#243;n -join, la cabecera <span class="mailheader">Asunto:</span> y el cuerpo del mensaje
+      son ignorados.  Note que milista-unsubscribe@ejemplo.com es un alias para
       la direcci&#243;n -leave.
 
 <P>
 </LI>
-<LI><span class="email">milista-owner@ejemplo.com</span> - Esta direcci&#243;n permite contactar al
-      al propietario o moderador de la lista.  Esta es la direcci&#243;n que deber&#225;
-      utilizar cuando necesite contactar a la persona o personas encargadas de
-      la lista.
+<LI><span class="email">milista-owner@ejemplo.com</span> - Con esta direcci&#243;n se llega
+      directamente al propietario y moderador de la lista.  Esta es la
+      direcci&#243;n que usted usa si necesita contactar a la persona o
+      personas encargadas de la lista.
 
 <P>
 </LI>
-<LI><span class="email">milista-request@ejemplo.com</span> - Esta direcci&#243;n est&#225; asociada a un
-      robot de correo que procesa &#243;rdenes de correo electr&#243;nico que se pueden usar
-      para definir las distintas opciones de los suscriptores, as&#237; 
-      como tambi&#233;n para procesar otras &#243;rdenes.  En el Ap&#233;ndice&nbsp;<A HREF="node41.html#a:commands">A</A> se
-      proporciona una lista de las &#243;rdenes de correo electr&#243;nico que reconoce el
-      robot.
+<LI><span class="email">milista-request@ejemplo.com</span> - Esta direcci&#243;n alcanza un robot
+      de correo que procesa &#243;rdenes de correo electr&#243;nico que se pueden usar
+      para definir opciones de suscripci&#243;n de los miembros, as&#237; como tambi&#233;n
+      para procesar otros comandos.  En el Ap&#233;ndice&nbsp;<A HREF="node41.html#a:commands">A</A> se
+      proporciona una lista de &#243;rdenes de correo electr&#243;nico de miembros de
+      listas.
 
 <P>
 </LI>
-<LI><span class="email">milista-bounces@ejemplo.com</span> - Esta direcci&#243;n se usa para el
-      procesamiento autom&#225;tico de los mensajes devueltos de Mailman.
+<LI><span class="email">milista-bounces@ejemplo.com</span> - Esta direcci&#243;n se usa para
+      procesamiento autom&#225;tico de mensajes devueltos de Mailman.
 
 <P>
 </LI>
 <LI><span class="email">milista-confirm@ejemplo.com</span> - Esta direcci&#243;n se usa para
-      procesar mensajes de confirmaci&#243;n de las solicitudes de suscripci&#243;n y
+      procesar mensajes de confirmaci&#243;n de solicitudes de suscripci&#243;n y
       desuscripci&#243;n.
 </LI>
 </UL>
 
 <P>
-Tambi&#233;n hay una direcci&#243;n -admin que permite contactar a los
-administradores de las listas.  Esta direcci&#243;n solo existe por
+Tambi&#233;n hay una direcci&#243;n -admin con la cual tambi&#233;n se llega a los
+administradores de listas, pero esta direcci&#243;n solamente existe por
 compatibilidad con las versiones m&#225;s antig&#252;as de Mailman.
 
 <P>
@@ -122,12 +121,12 @@ Para cambiar las opciones, se usa la direcci&#243;n <span class="email">NOMBRELI
 (por ejemplo, <span class="email">milista-request@ejemplo.com</span>).
 
 <P>
-Las &#243;rdenes pueden aparecer tanto en el asunto como en el cuerpo del mensaje.
-Cada orden deber&#237;a ir en una l&#237;nea distinta. Si su programa de correo
-agrega autom&#225;ticamente una firma a sus mensajes, usted podr&#237;a desear colocar
-la palabra ``<var>end</var>'' (sin comillas) en una l&#237;nea separada despu&#233;s de sus
-otras &#243;rdenes.  La orden <var>end</var> hace que Mailman no siga procesando el
-mensaje.
+Las &#243;rdenes pueden aparecer en la l&#237;nea de asunto o en el cuerpo del mensaje.
+Cada comando deber&#237;a ir en una l&#237;nea separada. Si su programa de correo
+adiciona autom&#225;ticamente una firma a sus mensajes, usted podr&#237;a desear colocar
+la palabra ``<var>end</var>'' (sin las comillas) en una l&#237;nea separada despu&#233;s de sus
+otras &#243;rdenes.  La orden <var>end</var> le dice a Mailman que no procese el correo
+electr&#243;nico despu&#233;s de ese punto.
 
 <P>
 La &#243;rden m&#225;s importante es probablemente la orden ``<var>help</var>'', ya que
@@ -174,7 +173,7 @@ salida de la orden <var>help</var>.)
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on 5 de enero 2007.</span>
+<span class="release-info">Release 2.1, documentation updated on 14 de febrero 2007.</span>
 </DIV>
 <!--End of Navigation Panel-->
 
