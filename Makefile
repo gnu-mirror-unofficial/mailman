@@ -21,10 +21,12 @@ GENERATED_HTML= $(SOURCES:.ht=.html)
 
 all: $(TARGETS)
 
-faq.ht: ../../docs/readmes/FAQ.txt
+DOCSDIR = $(HOME)/projects/mailman/3.0/docs
+
+faq.ht: $(DOCSDIR)/readmes/FAQ.txt
 	../bin/faq2ht.py $< $@
 
-todo.ht: ../../docs/readmes/TODO.txt
+todo.ht: $(DOCSDIR)/readmes/TODO.txt
 	../bin/mm2do $< $@
 
 install:
