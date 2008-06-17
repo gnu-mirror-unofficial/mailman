@@ -11,7 +11,6 @@ HTRELDIR = .
 RSYNC_ARGS = -rltgoDCvz
 
 SOURCES =	$(shell echo *.ht)
-EXTRA_TARGETS = faq.html todo.html
 TARGETS =	$(filter-out *.html,$(SOURCES:%.ht=%.html)) $(EXTRA_TARGETS)
 GENERATED_HTML= $(SOURCES:.ht=.html)
 
@@ -21,14 +20,6 @@ GENERATED_HTML= $(SOURCES:.ht=.html)
 
 all: $(TARGETS)
 
-DOCSDIR = $(HOME)/projects/mailman/3.0/docs
-
-faq.ht: $(DOCSDIR)/readmes/FAQ.txt
-	../bin/faq2ht.py $< $@
-
-todo.ht: $(DOCSDIR)/readmes/TODO.txt
-	../bin/mm2do $< $@
-
 install:
 	-rsync $(RSYNC_ARGS) . www.list.org:mailman.list.org
 	-rsync $(RSYNC_ARGS) . mailman.sf.net:mailman/htdocs
@@ -36,4 +27,3 @@ install:
 
 clean:
 	-rm $(GENERATED_HTML)
-	-rm faq.ht todo.ht

@@ -11,10 +11,16 @@ Other-links:
 
 There are many resources available for those who need help with
 Mailman, beyond the <a href="docs.html">on-line documentation</a>.  If
-you are having problems installing or configuring Mailman, or if you
-have questions about what Mailman can do, you should probably start
-with the <a href="faq.html">FAQ</a>, and the community driven
-<a href="http://www.python.org/cgi-bin/faqw-mm.py">FAQ Wizard</a>.
+you are having problems installing or configuring Mailman, you should
+probably start here:
+
+y<ul>
+ <li>The community driven <a
+href="http://wiki.list.org/display/DOC/Frequently+Asked+Questions">Frequently
+Asked Questions</a>
+ <li>The read-only, historical <a
+href="http://www.python.org/cgi-bin/faqw-mm.py">FAQ Wizard</a> 
+</ul>
 
 <p>You should also check out the community driven
 <a href="http://wiki.list.org">wiki</a>, which hold the most up-to-date
