@@ -33,7 +33,7 @@ they won't get lost, although it is also requested that you inform the
 mailman-developers list about your submissions.  Please do not send patches to
 the mailing list!
 
-You might also want to look at the
+<p>You might also want to look at the
 <a href="http://sourceforge.net/projects/mailman">old Mailman project page at
 SourceForge</a>.  We appreciate the years of good service from the SourceForge
 guys, but we've moved all Mailman development to
