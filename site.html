@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
 <!-- THIS PAGE IS AUTOMATICALLY GENERATED.  DO NOT EDIT. -->
-<!-- Sun Jul  6 11:41:20 2008 -->
+<!-- Wed Nov  5 14:32:23 2008 -->
 <!-- USING HT2HTML 2.0 -->
 <!-- SEE http://ht2html.sf.net -->
 <!-- User-specified headers:
@@ -203,7 +203,7 @@ available to the site administrator in the <code>bin</code> directory.
 For more details, run the script with the <code>--help</code> option,
 which will print out the usage synopsis.  <em>You must run these
 scripts from the bin directory in the Mailman installation location,
-usually <code>/home/mailman</code></em>.
+default <code>/usr/local/mailman</code></em>.
 
 <dl>
 <dt><b>add_members</b>
@@ -230,6 +230,10 @@ usually <code>/home/mailman</code></em>.
 <dt><b>check_perms</b>
 <dd>Use this script to check, and optionally fix, the permissions of
     the various files in a Mailman installation.
+
+<dt><b>cleanarch</b>
+<dd>Use this script to check a .mbox file for unescaped From_ lines
+    in the message bodies prior to using it as input to <b>arch</b>.
 
 <dt><b>clone_member</b>
 <dd>Use this script to <em>clone</em> an address on a particular list
@@ -265,6 +269,9 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
 <dt><b>digest_arch</b>
 <dd>This script is deprecated.
 
+<dt><b>discard</b>
+<dd>Use this script to discard held messages for a list or lists.
+
 <dt><b>dumpdb</b>
 <dd>This script dumps the plain text representation for any <code>.db</code>
     database file.  These files usually contain Python marshaled
@@ -282,6 +289,9 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
 <dd>Use this script to regenerate the plain text and <em>db</em> alias
     files for Postfix (if you're using Postfix as your MTA).
 
+<dt><b>inject</b>
+<dd>Use this script to inject a message into a Mailman queue.
+
 <dt><b>list_admins</b>
 <dd>List all the owners of a mailing list.
 
@@ -292,6 +302,10 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
 <dd>List the members of a mailing list.  Command line options let you
     print just the regular or just the digest members, print the
     case-preserved addresses of the members, etc.
+
+<dt><b>list_owners</b>
+<dd>This script is a variant of <b>list_admins</b> that can also list
+    moderators and can select a subset of lists.
 
 <dt><b>mailmanctl</b>
 <dd>The main qrunner control script.  Use this to start, stop, and
@@ -304,13 +318,17 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
     choose wisely!
 
 <dt><b>move_list</b>
-<dd>Use this script when you move Mailman to a new installation location.
+<dd>This script is deprecated.
 
 <dt><b>newlist</b>
 <dd>Use this script to create new mailing lists.
 
 <dt><b>qrunner</b>
 <dd>Use this to run a single qrunner once (for debugging).
+
+<dt><b>rb-archfix</b>
+<dd>Use this script to reduce the size of pre-Mailman 2.1.3 -article
+    database files.
 
 <dt><b>remove_members</b>
 <dd>Use this list to remove members from a mailing list.
@@ -319,6 +337,10 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
 <dd>Use this script to remove a mailing list.  By default, a list's
     archives are not removed unless the <code>--archives</code> option
     is given.
+
+<dt><b>show_qfiles</b>
+<dd>Use this script to display the message contained in one or more
+    Mailman queue entry files.
 
 <dt><b>sync_members</b>
 <dd>Use this to synchronize mailing lists in a list's database with a
@@ -331,6 +353,16 @@ web_page_url = 'http://www.mynewsite.com/mailman-relocated/'
 
     <p>Command line options let you send various notification emails,
     preview the changes, etc.
+
+<dt><b>transcheck</b>
+<dd>Use this script to to check the templates and message catalog of a
+    translation to make sure that variables and tags referenced in the
+    translation are the same as the variables and tags in the original
+    templates and catalog.
+
+<dt><b>unshunt</b>
+<dd>Use this script to reprocess shunted messages after fixing the
+    underying problem that caused the shunting.
 
 <dt><b>update</b>
 <dd>Don't use this script manually; it is used as part of the
@@ -403,6 +435,14 @@ cron scripts do:
 <dt><b>checkdbs</b>
 <dd>Checks for ending list requests (posts and subscriptions) and
     mails the list manager if there are any.
+
+<dt><b>cull_bad_shunt</b>
+<dd>Removes and possibly archives old entries fron the 'bad' and 'shunt'
+    queues.
+
+<dt><b>disabled</b>
+<dd>Sends warning notices when due and ultimately unsubscribes members
+    with delivery disabled by bounce.
 
 <dt><b>gate_news</b>
 <dd>Polls the NNTP servers for messages and forwards any new messages
