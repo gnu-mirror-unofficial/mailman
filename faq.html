@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
 <!-- THIS PAGE IS AUTOMATICALLY GENERATED.  DO NOT EDIT. -->
-<!-- Thu Dec  4 18:37:50 2008 -->
+<!-- Mon Dec  8 23:11:17 2008 -->
 <!-- USING HT2HTML 2.0 -->
 <!-- SEE http://ht2html.sf.net -->
 <!-- User-specified headers:
@@ -161,8 +161,8 @@ entire article is permitted in any medium, provided this notice is preserved.
 <!-- end of sidebar cell -->
 <!-- start of body cell -->
 <td valign="top" width="90%" class="body"><br>
-See also the <a href="http://www.python.org/cgi-bin/faqw-mm.py">Mailman
-FAQ Wizard</a> for more information.
+See also the <a href="http://wiki.list.org/x/AgA3">Mailman
+FAQ</a> for more information.
 
  <h3>Mailman Frequently Asked Questions</h3>
 
@@ -180,10 +180,11 @@ FAQ Wizard</a> for more information.
    your MTA via SMTPDirect.py).  This is a Bad Thing.  You need to
    turn off synchronous DNS resolution for messages originating from
    the local host.
-<p>    In Exim, the value to edit is receiver_verify_hosts.  See
-   README.EXIM for details.  Other MTAs have (of course) different
-   parameters and defaults that control this.  First check the README
-   file for your MTA and then consult your MTA's own documentation.
+<p>    In Exim, the value to edit is receiver_verify_hosts.  Consult the
+   Mailman Installation Manual for details.  Other MTAs have (of
+   course) different parameters and defaults that control this.  First
+   check the README file for your MTA and then consult your MTA's own
+   documentation.
 <p> <b> Q. My list members are complaining about Mailman's List-* headers!
    What can I do about this?
 
@@ -227,7 +228,7 @@ FAQ Wizard</a> for more information.
 <p>    causes the messages to go to them in /var/log/syslog, for example.
    (The distributed syslog.conf forwards the message to the loghost,
    when present.  See the syslog man page for more details.)
-<p>    If your system is set like this, and you get a failure trying to
+<p>    If your system is set up like this, and you get a failure trying to
    visit the mailman/listinfo web page, and it's due to a UID or GID
    mismatch, then you should get an entry at the end of
    /var/log/syslog identifying the expected and received values.
@@ -265,11 +266,7 @@ FAQ Wizard</a> for more information.
    You can fix the archive mbox files by adding:
 <p>        From somebody Mon Oct  9 12:27:34 MDT 2000
 <p>    before every message and re-running the archive command
-   "bin/arch listname".  The archives should now exist.  See README.QMAIL
-   for more information.
-<p> <b> Q. Still having problems?  Running on GNU/Linux?
-
-</b><br> A. See the README.LINUX file.
+   "bin/arch listname".  The archives should now exist.
 <p> <b> Q. I want to get rid of some messages in my archive.  How do I do
    this?
 
@@ -321,8 +318,7 @@ FAQ Wizard</a> for more information.
      type the password in every time.
 <p> <b> Q. I want to backup my lists.  What do I need to save?
 
-</b><br> A. See this FAQ wizard entry:
-   <a href="http://www.python.org/cgi-bin/faqw-mm.py?req=show&file=faq04.006.htp">http://www.python.org/cgi-bin/faqw-mm.py?req=show&file=faq04.006.htp</a>
+</b><br> A. See this FAQ entry: <a href="http://wiki.list.org/x/5oA9">http://wiki.list.org/x/5oA9</a>
 <p> <b> Q. How do I rename a list?
 
 </b><br> A. Renaming a list is currently a bit of a pain to do completely

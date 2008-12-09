@@ -2,29 +2,30 @@
 <html>
 <head>
 <link rel="STYLESHEET" href="mailman-install.css" type='text/css' />
-<link rel="first" href="mailman-install.html" title='GNU Mailman - Installation Manual' />
+<link rel="first" href="mailman-install.html" title='GNU mailman - installation Manual' />
 <link rel='last' href='about.html' title='About this document...' />
 <link rel='help' href='about.html' title='About this document...' />
 <link rel="prev" href="node31.html" />
 <link rel="parent" href="mail-server.html" />
 <link rel="next" href="node36.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name='aesop' content='information' />
 <title>6.4 Using the Qmail mail server</title>
 </head>
 <body>
-<DIV CLASS="navigation">
+<div class="navigation">
 <div id='top-navigation-panel' xml:id='top-navigation-panel'>
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="6.3.3 Performance notes"
+<td class='online-navigation'><a rel="prev" title="6.3.3 performance notes"
   href="node34.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="6 Set up your"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="6 set up your"
   href="mail-server.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="6.4.1 Information on VERP"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="6.4.1 information on VERP"
   href="node36.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - Installation Manual</td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
@@ -35,42 +36,42 @@
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node34.html">6.3.3 Performance notes</A>
+<a class="sectref" rel="prev" href="node34.html">6.3.3 Performance notes</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="mail-server.html">6 Set up your</A>
+<a class="sectref" rel="parent" href="mail-server.html">6 Set up your</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node36.html">6.4.1 Information on VERP</A>
+<a class="sectref" rel="next" href="node36.html">6.4.1 Information on VERP</a>
 </div>
 <hr /></div>
-</DIV>
+</div>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION001640000000000000000"></A><A NAME="qmail-issues"></A>
-<BR>
+<h2><a name="SECTION001640000000000000000"></a><a name="qmail-issues"></a>
+<br>
 6.4 Using the Qmail mail server
-</H2>
+</h2>
 
-<P>
+<p>
 There are some issues that users of the qmail mail transport agent have
 encountered.  None of the core maintainers use qmail, so all of this
 information has been contributed by the Mailman user community, especially
 Martin Preishuber and Christian Tismer, with notes by Balazs Nagy (BN) and
 Norbert Bollow (NB).
 
-<P>
+<p>
 
-<UL>
-<LI>You might need to set the mail-gid user to either <code>qmail</code>,
+<ul>
+<li>You might need to set the mail-gid user to either <code>qmail</code>,
       <code>mailman</code>, or <code>nofiles</code> by using the
       <b class="programopt">--with-mail-gid</b> <b class="program">configure</b> option.
 
-<P>
+<p>
 <em>BN:</em> it highly depends on your mail storing policy.  For example
       if you use the simple <span class="file">~alias/.qmail-*</span> files, you can use
       <b class="program">`id -g alias`</b>.  But if you use <span class="file">/var/qmail/users</span>, the
       specified mail gid can be used.
 
-<P>
+<p>
 If you are going to be directing virtual domains directly to the
       <code>mailman</code> user (using ``virtualdomains'' on a list-only domain, for
       example), you will have to use <b class="programopt">--with-mail-gid</b>=<var>gid
@@ -78,51 +79,51 @@ If you are going to be directing virtual domains directly to the
       in <span class="file">~alias</span>, unless that alias simply forwards to
       <code>mailman-listname*</code>.
 
-<P>
-</LI>
-<LI>If there is a user <code>mailman</code> on your system, the alias
+<p>
+</li>
+<li>If there is a user <code>mailman</code> on your system, the alias
       <code>mailman-owner</code> will work only in <span class="file">~mailman</span>.  You have to do
       a <b class="program">touch .qmail-owner</b> in <span class="file">~mailman</span> directory to create
       this alias.
 
-<P>
+<p>
 <em>NB:</em> An alternative, IMHO better solution is to <b class="program">chown
       root ~mailman</b>, that will stop qmail from considering <code>mailman</code> to
       be a user to whom mail can be delivered.  (See ``man 8 qmail-getpw''.)
 
-<P>
-</LI>
-<LI>In a related issue, if you have any users with the same name as one of
+<p>
+</li>
+<li>In a related issue, if you have any users with the same name as one of
       your mailing lists, you will have problems if list names contain
       "<tt class="samp">-</tt>" in them.  Putting <span class="file">.qmail</span> redirections into the user's
       home directory doesn't work because the Mailman wrappers will not get
       spawned with the proper GID.  The solution is to put the following lines
       in the <span class="file">/var/qmail/users/assign</span> file:
 
-<P>
+<p>
 <div class="verbatim"><pre>
   +zope-:alias:112:11:/var/qmail/alias:-:zope-:
   .
 </pre></div>
 
-<P>
+<p>
 where in this case the listname is e.g. <code>zope-users</code>.
 
-<P>
+<p>
 <em>NB:</em> Alternatively, you could host the lists on a virtual domain,
       and use the <span class="file">/var/qmail/control/virtualdomains</span> file to put the
       <code>mailman</code> user in charge of this virtual domain.
 
-<P>
-</LI>
-<LI><em>BN:</em>If inbound messages are delivered by another user than
+<p>
+</li>
+<li><em>BN:</em>If inbound messages are delivered by another user than
       <code>mailman</code>, it's necessary to allow it to access <span class="file">~mailman</span>.
       Be sure that <span class="file">~mailman</span> has group writing access and setgid bit is
       set.  Then put the delivering user to <code>mailman</code> group, and you can
       deny access to <span class="file">~mailman</span> to others.  Be sure that you can do the
       same with the WWW service.
 
-<P>
+<p>
 By the way the best thing is to make a virtual mail server to handle all
       of the mail.  <em>NB:</em> E.g. make an additional "A" DNS record for the
       virtual mailserver pointing to your IP address, add the line
@@ -132,19 +133,19 @@ By the way the best thing is to make a virtual mail server to handle all
       ``virtualdomains''.  Then every mail to lists.kva.hu will arrive to
       mail.kva.hu's mailman user.
 
-<P>
+<p>
 Then make your aliases:
 
-<P>
+<p>
 <div class="verbatim"><pre>
           .qmail              =&gt; mailman@...'s letters
           .qmail-owner        =&gt; mailman-owner's letters
 </pre></div>
 
-<P>
+<p>
 For list aliases, you can either create them manually:
 
-<P>
+<p>
 <div class="verbatim"><pre>
           .qmail-list         =&gt; posts to the 'list' list
           .qmail-list-admin   =&gt; posts to the 'list's owner
@@ -152,64 +153,64 @@ For list aliases, you can either create them manually:
           etc
 </pre></div>
 
-<P>
+<p>
 or for automatic list alias handling (when using the lists.kva.hu
       virtual as above), see <span class="file">contrib/qmail-to-mailman.py</span> in the Mailman
       source distribution.  Modify the <span class="file">~mailman/.qmail-default</span> to
       include:
 
-<P>
+<p>
 <div class="verbatim"><pre>
           |preline /path/to/python /path/to/qmail-to-mailman.py
 </pre></div>
 
-<P>
+<p>
 and new lists will automatically be picked up.
 
-<P>
-</LI>
-<LI>You have to make sure that the localhost can relay.  If you start qmail
+<p>
+</li>
+<li>You have to make sure that the localhost can relay.  If you start qmail
       via inetd and tcpenv, you need some line the following in your
       <span class="file">/etc/hosts.allow</span> file:
 
-<P>
+<p>
 <div class="verbatim"><pre>
       tcp-env: 127. 10.205.200. : setenv RELAYCLIENT
 </pre></div>
 
-<P>
+<p>
 where 10.205.200. is your IP address block.  If you use tcpserver, then
       you need something like the following in your <span class="file">/etc/tcp.smtp</span> file:
 
-<P>
+<p>
 <div class="verbatim"><pre>
       10.205.200.:allow,RELAYCLIENT=""
       127.:allow,RELAYCLIENT=""
 </pre></div>
 
-<P>
-</LI>
-<LI><em>BN:</em> Bigger <span class="file">/var/qmail/control/concurrencyremote</span> values
+<p>
+</li>
+<li><em>BN:</em> Bigger <span class="file">/var/qmail/control/concurrencyremote</span> values
       work better sending outbound messages, within reason.  Unless you know
       your system can handle it (many if not most cannot) this should not be
       set to a value greater than 120.
 
-<P>
-</LI>
-<LI>More information about setting up qmail and relaying can be found in the
+<p>
+</li>
+<li>More information about setting up qmail and relaying can be found in the
       qmail documentation.
-</LI>
-</UL>
+</li>
+</ul>
 
-<P>
+<p>
 <em>BN:</em> Last but not least, here's a little script to generate aliases to
 your lists (if for some reason you can/will not have them automatically picked
 up using <span class="file">contrib/qmail-to-mailman.py</span>):
 
-<P>
+<p>
 This script is for the Mailman 2.0 series:
 
-<P>
+<p>
 <div class="verbatim"><pre>
 #!/bin/sh
 if [ $# = 1 ]; then
@@ -223,7 +224,7 @@ if [ $# = 1 ]; then
 fi
 </pre></div>
 
-<P>
+<p>
 <div class="note"><b class="label">Note:</b>
 
 This is for a new Mailman 2.1 installation.  Users upgrading from
@@ -232,7 +233,7 @@ Mailman 2.0 would most likely change <span class="file">/usr/local/mailman</span
 option passed to <b class="program">configure</b> during compile time.
 </div>
 
-<P>
+<p>
 <div class="verbatim"><pre>
 #!/bin/sh
 if [ $# = 1 ]; then
@@ -253,35 +254,35 @@ if [ $# = 1 ]; then
 fi
 </pre></div>
 
-<P>
+<p>
 
 <p><br /></p><hr class='online-navigation' />
 <div class='online-navigation'>
 <!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></a>
+<a name="CHILD_LINKS"><strong>Subsections</strong></a>
 
-<UL CLASS="ChildLinks">
-<LI><A href="node36.html">6.4.1 Information on VERP</a>
-<LI><A href="node37.html">6.4.2 Virtual mail server</a>
-<LI><A href="node38.html">6.4.3 More information</a>
+<ul class="ChildLinks">
+<li><a href="node36.html">6.4.1 Information on VERP</a>
+<li><a href="node37.html">6.4.2 Virtual mail server</a>
+<li><a href="node38.html">6.4.3 More information</a>
 </ul>
 <!--End of Table of Child-Links-->
 </div>
 
-<DIV CLASS="navigation">
+<div class="navigation">
 <div class='online-navigation'>
 <p></p><hr />
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="6.3.3 Performance notes"
+<td class='online-navigation'><a rel="prev" title="6.3.3 performance notes"
   href="node34.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="6 Set up your"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="6 set up your"
   href="mail-server.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="6.4.1 Information on VERP"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="6.4.1 information on VERP"
   href="node36.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - Installation Manual</td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
@@ -292,17 +293,17 @@ fi
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node34.html">6.3.3 Performance notes</A>
+<a class="sectref" rel="prev" href="node34.html">6.3.3 Performance notes</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="mail-server.html">6 Set up your</A>
+<a class="sectref" rel="parent" href="mail-server.html">6 Set up your</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node36.html">6.4.1 Information on VERP</A>
+<a class="sectref" rel="next" href="node36.html">6.4.1 Information on VERP</a>
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on September 12, 2007.</span>
-</DIV>
+<span class="release-info">Release 2.1, documentation updated on December 5, 2008.</span>
+</div>
 <!--End of Navigation Panel-->
 
-</BODY>
-</HTML>
+</body>
+</html>

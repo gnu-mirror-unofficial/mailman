@@ -2,7 +2,7 @@ Title: Mailman Documentation
 Links: links.h doco-links.h
 Other-links:
     <h3>Exits</h3>
-    <li><a href="http://www.python.org/cgi-bin/faqw-mm.py">FAQ Wizard</a>
+    <li><a href="http://wiki.list.org/x/AgA3">FAQ</a>
     <li><a href="http://staff.imsa.edu/~ckolar/mailman">Chris Kolar's Docs</a>
     <li><a href="http://www.exim.org/howto/mailman.html">Exim HOWTO</a>
 
@@ -49,10 +49,9 @@ useful as a general help guide too.
 
 <p>The <a href="faq.html">Frequently Asked Questions (FAQ)</a> is
 available to answer the most common questions.  See also the community
-driven <a href="http://www.python.org/cgi-bin/faqw-mm.py">Mailman
-FAQ Wizard</a>.  Feel free to add or correct entries in the FAQ Wizard
--- this is your resource for helping your colleagues.  The password is
-<em>Mailman</em> (yes, we use the honor system here).
+driven <a href=http://wiki.list.org/x/AgA3">Mailman
+FAQ</a>.  Feel free to add or correct entries in the FAQ
+-- this is your resource for helping your colleagues.
 
 <p>For issues not covered in the FAQ or documentation pages above,
 please check the
