@@ -22,7 +22,7 @@ all: $(TARGETS)
 
 install:
 	-rsync $(RSYNC_ARGS) . www.list.org:mailman.list.org
-	-rsync $(RSYNC_ARGS) . mailman.sf.net:mailman/htdocs
+	#-rsync $(RSYNC_ARGS) . mailman.sf.net:mailman/htdocs
 	-rsync $(RSYNC_ARGS) . $(HOME)/projects/mailman-gnu
 
 clean:
