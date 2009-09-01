@@ -7,7 +7,7 @@
 <h3>More Information</h3>
 <li><a href="http://wiki.list.org">Wiki</a> <i>(exit)</i></li>
 <li><a href="lists.html">Discussion Lists</a></li>
-<li><a href="http://sf.net/projects/mailman">SF Project Page</a>
+<li><a href="http://launchpad.net/mailman">Launchpad Project Page</a>
     <i>(exit)</i></li>
 <li><a href="otherstuff.html">Rants, Papers, and Logos</a></li>
 <li><a href="bugs.html">Bugs and Patches</a></li>

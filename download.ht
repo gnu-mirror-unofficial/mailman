@@ -11,11 +11,11 @@ pre-requisites.
 Mailman is available from the following sources:
 
 <ul>
-    <li><a href="http://sourceforge.net/project/showfiles.php?group_id=103">SourceForge</a>
+    <li><a href="http://launchpad.net/mailman">Launchpad</a>
     <li><a href="http://ftp.gnu.org/gnu/mailman/">GNU</a>
 </ul>
 
-<i>Note: the GNU ftp site may lag behind SourceForge, especially just after a
+<i>Note: the GNU ftp site may lag behind Launchpad, especially just after a
 release announcement.  It often takes a little while for the GNU ftp site to
 catch up.</i>
 
