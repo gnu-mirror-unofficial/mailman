@@ -11,26 +11,26 @@
 <link rel="next" href="node11.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name='aesop' content='information' />
-<title>3.2 El interfaz de correo electr�nico</title>
+<title>3.2 El interfaz de correo electrónico</title>
 </head>
 <body>
-<DIV CLASS="navigation">
+<div class="navigation">
 <div id='top-navigation-panel' xml:id='top-navigation-panel'>
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="3.1 El interfaz web"
+<td class='online-navigation'><a rel="prev" title="3.1 el interfaz web"
   href="node9.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="3 Interfaces de Mailman"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="3 interfaces de Mailman"
   href="node8.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="4 �Necesito hablar con"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="4 ¡Necesito hablar con"
   href="node11.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU&nbsp;Mailman Manual&nbsp;del&nbsp;Suscriptor&nbsp;de&nbsp;Listas</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -38,126 +38,126 @@
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node9.html">3.1 El interfaz web</A>
+<a class="sectref" rel="prev" href="node9.html">3.1 El interfaz web</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node8.html">3 Interfaces de Mailman</A>
+<a class="sectref" rel="parent" href="node8.html">3 Interfaces de Mailman</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node11.html">4 �Necesito hablar con</A>
+<a class="sectref" rel="next" href="node11.html">4 ¡Necesito hablar con</a>
 </div>
 <hr /></div>
-</DIV>
+</div>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION002320000000000000000"></A><A NAME="sec:email"></A>
-<BR>
-3.2 El interfaz de correo electr&#243;nico
-</H2>
+<h2><a name="SECTION002320000000000000000"></a><a name="sec:email"></a>
+<br>
+3.2 El interfaz de correo electrónico
+</h2>
 
-<P>
-Toda lista de correo tiene un conjunto de direcciones de correo electr&#243;nico
-a las cuales se pueden enviar los mensajes.  Siempre hay una direcci&#243;n
-para enviar los mensajes a la lista, una direcci&#243;n a a la cual se env&#237;an
-los mensajes devueltos y direcciones para procesar &#243;rdenes de correo.
+<p>
+Toda lista de correo tiene un conjunto de direcciones de correo electrónico
+a las cuales se pueden enviar los mensajes.  Siempre hay una dirección
+para enviar los mensajes a la lista, una dirección a a la cual se envían
+los mensajes devueltos y direcciones para procesar órdenes de correo.
 Para una lista de correo ficticia llamada
-<span class="email">milista@ejemplo.com</span>, usted encontrar&#237;a estas direcciones:
+<span class="email">milista@ejemplo.com</span>, usted encontraría estas direcciones:
 
-<P>
+<p>
 
-<UL>
-<LI><span class="email">milista@ejemplo.com</span> - esta es la direcci&#243;n de correo que la gente
-      deber&#237;a usar para los nuevos env&#237;os a la lista.
+<ul>
+<li><span class="email">milista@ejemplo.com</span> - esta es la dirección de correo que la gente
+      debería usar para los nuevos envíos a la lista.
 
-<P>
-</LI>
-<LI><span class="email">milista-join@ejemplo.com</span> - enviando un mensaje a esta direcci&#243;n,
-      un nuevo miembro puede solicitar suscripci&#243;n a la lista.  Tanto la cabecera
+<p>
+</li>
+<li><span class="email">milista-join@ejemplo.com</span> - enviando un mensaje a esta dirección,
+      un nuevo miembro puede solicitar suscripción a la lista.  Tanto la cabecera
       de <span class="mailheader">Asunto:</span> como el cuerpo de tal mensaje son ignorados.  Note
-      que milista-subscribe@ejemplo.com es un alias para la direcci&#243;n -join.
+      que milista-subscribe@ejemplo.com es un alias para la dirección -join.
 
-<P>
-</LI>
-<LI><span class="email">milista-leave@ejemplo.com</span> - enviando un mensaje a esta direcci&#243;n
-      un miembro puede solicitar desuscripci&#243;n de la lista.  Igual que con la
-      direcci&#243;n -join, la cabecera <span class="mailheader">Asunto:</span> y el cuerpo del mensaje
+<p>
+</li>
+<li><span class="email">milista-leave@ejemplo.com</span> - enviando un mensaje a esta dirección
+      un miembro puede solicitar desuscripción de la lista.  Igual que con la
+      dirección -join, la cabecera <span class="mailheader">Asunto:</span> y el cuerpo del mensaje
       son ignorados.  Note que milista-unsubscribe@ejemplo.com es un alias para
-      la direcci&#243;n -leave.
+      la dirección -leave.
 
-<P>
-</LI>
-<LI><span class="email">milista-owner@ejemplo.com</span> - Con esta direcci&#243;n se llega
+<p>
+</li>
+<li><span class="email">milista-owner@ejemplo.com</span> - Con esta dirección se llega
       directamente al propietario y moderador de la lista.  Esta es la
-      direcci&#243;n que usted usa si necesita contactar a la persona o
+      dirección que usted usa si necesita contactar a la persona o
       personas encargadas de la lista.
 
-<P>
-</LI>
-<LI><span class="email">milista-request@ejemplo.com</span> - Esta direcci&#243;n alcanza un robot
-      de correo que procesa &#243;rdenes de correo electr&#243;nico que se pueden usar
-      para definir opciones de suscripci&#243;n de los miembros, as&#237; como tambi&#233;n
-      para procesar otros comandos.  En el Ap&#233;ndice&nbsp;<A HREF="node41.html#a:commands">A</A> se
-      proporciona una lista de &#243;rdenes de correo electr&#243;nico de miembros de
+<p>
+</li>
+<li><span class="email">milista-request@ejemplo.com</span> - Esta dirección alcanza un robot
+      de correo que procesa órdenes de correo electrónico que se pueden usar
+      para definir opciones de suscripción de los miembros, así como también
+      para procesar otros comandos.  En el Apéndice&nbsp;<a href="node41.html#a:commands">A</a> se
+      proporciona una lista de órdenes de correo electrónico de miembros de
       listas.
 
-<P>
-</LI>
-<LI><span class="email">milista-bounces@ejemplo.com</span> - Esta direcci&#243;n se usa para
-      procesamiento autom&#225;tico de mensajes devueltos de Mailman.
+<p>
+</li>
+<li><span class="email">milista-bounces@ejemplo.com</span> - Esta dirección se usa para
+      procesamiento automático de mensajes devueltos de Mailman.
 
-<P>
-</LI>
-<LI><span class="email">milista-confirm@ejemplo.com</span> - Esta direcci&#243;n se usa para
-      procesar mensajes de confirmaci&#243;n de solicitudes de suscripci&#243;n y
-      desuscripci&#243;n.
-</LI>
-</UL>
+<p>
+</li>
+<li><span class="email">milista-confirm@ejemplo.com</span> - Esta dirección se usa para
+      procesar mensajes de confirmación de solicitudes de suscripción y
+      desuscripción.
+</li>
+</ul>
 
-<P>
-Tambi&#233;n hay una direcci&#243;n -admin con la cual tambi&#233;n se llega a los
-administradores de listas, pero esta direcci&#243;n solamente existe por
-compatibilidad con las versiones m&#225;s antig&#252;as de Mailman.
+<p>
+También hay una dirección -admin con la cual también se llega a los
+administradores de listas, pero esta dirección solamente existe por
+compatibilidad con las versiones más antigüas de Mailman.
 
-<P>
-Para cambiar las opciones, se usa la direcci&#243;n <span class="email">NOMBRELISTA-request</span>
+<p>
+Para cambiar las opciones, se usa la dirección <span class="email">NOMBRELISTA-request</span>
 (por ejemplo, <span class="email">milista-request@ejemplo.com</span>).
 
-<P>
-Las &#243;rdenes pueden aparecer en la l&#237;nea de asunto o en el cuerpo del mensaje.
-Cada comando deber&#237;a ir en una l&#237;nea separada. Si su programa de correo
-adiciona autom&#225;ticamente una firma a sus mensajes, usted podr&#237;a desear colocar
-la palabra ``<var>end</var>'' (sin las comillas) en una l&#237;nea separada despu&#233;s de sus
-otras &#243;rdenes.  La orden <var>end</var> le dice a Mailman que no procese el correo
-electr&#243;nico despu&#233;s de ese punto.
+<p>
+Las órdenes pueden aparecer en la línea de asunto o en el cuerpo del mensaje.
+Cada comando debería ir en una línea separada. Si su programa de correo
+adiciona automáticamente una firma a sus mensajes, usted podría desear colocar
+la palabra ``<var>end</var>'' (sin las comillas) en una línea separada después de sus
+otras órdenes.  La orden <var>end</var> le dice a Mailman que no procese el correo
+electrónico después de ese punto.
 
-<P>
-La &#243;rden m&#225;s importante es probablemente la orden ``<var>help</var>'', ya que
-&#233;sta hace que Mailman devuelva un mensaje completo de informaci&#243;n &#250;til sobre
-las &#243;rdenes de correo y direcciones para uso del interfaz web.
+<p>
+La órden más importante es probablemente la orden ``<var>help</var>'', ya que
+ésta hace que Mailman devuelva un mensaje completo de información útil sobre
+las órdenes de correo y direcciones para uso del interfaz web.
 
-<P>
-En los Ap&#233;ndices <A HREF="node41.html#a:commands">A</A> y <A HREF="node42.html#a:options">B</A> se proporcionan referencias
-r&#225;pidas a las &#243;rdenes de suscriptor (&#233;stas se han adaptado ligeramente de la
+<p>
+En los Apéndices <a href="node41.html#a:commands">A</a> y <a href="node42.html#a:options">B</a> se proporcionan referencias
+rápidas a las órdenes de suscriptor (éstas se han adaptado ligeramente de la
 salida de la orden <var>help</var>.)
 
-<P>
+<p>
 
-<DIV CLASS="navigation">
+<div class="navigation">
 <div class='online-navigation'>
 <p></p><hr />
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="3.1 El interfaz web"
+<td class='online-navigation'><a rel="prev" title="3.1 el interfaz web"
   href="node9.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="3 Interfaces de Mailman"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="3 interfaces de Mailman"
   href="node8.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="4 �Necesito hablar con"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="4 ¡Necesito hablar con"
   href="node11.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU&nbsp;Mailman Manual&nbsp;del&nbsp;Suscriptor&nbsp;de&nbsp;Listas</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -165,17 +165,17 @@ salida de la orden <var>help</var>.)
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node9.html">3.1 El interfaz web</A>
+<a class="sectref" rel="prev" href="node9.html">3.1 El interfaz web</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node8.html">3 Interfaces de Mailman</A>
+<a class="sectref" rel="parent" href="node8.html">3 Interfaces de Mailman</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node11.html">4 �Necesito hablar con</A>
+<a class="sectref" rel="next" href="node11.html">4 ¡Necesito hablar con</a>
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on 12 de septiembre 2007.</span>
-</DIV>
+<span class="release-info">Release 2.1, documentation updated on 4 de enero 2010.</span>
+</div>
 <!--End of Navigation Panel-->
 
-</BODY>
-</HTML>
+</body>
+</html>

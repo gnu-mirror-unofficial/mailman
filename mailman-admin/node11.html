@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="STYLESHEET" href="mailman-admin.css" type='text/css' />
-<link rel="first" href="mailman-admin.html" title='GNU Mailman - List Administration Manual' />
+<link rel="first" href="mailman-admin.html" title='GNU mailman - list Administration Manual' />
 <link rel='contents' href='contents.html' title="Contents" />
 <link rel='last' href='about.html' title='About this document...' />
 <link rel='help' href='about.html' title='About this document...' />
@@ -10,27 +10,28 @@
 <link rel="prev" href="node10.html" />
 <link rel="parent" href="node9.html" />
 <link rel="next" href="node12.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name='aesop' content='information' />
 <title>2.1.2 Reply-To header munging</title>
 </head>
 <body>
-<DIV CLASS="navigation">
+<div class="navigation">
 <div id='top-navigation-panel' xml:id='top-navigation-panel'>
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="2.1.1 General list personality"
+<td class='online-navigation'><a rel="prev" title="2.1.1 general list personality"
   href="node10.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="2.1 The General Options"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="2.1 the General Options"
   href="node9.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="2.1.3 Umbrella list settings"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="2.1.3 umbrella list settings"
   href="node12.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - List Administration Manual</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -38,31 +39,31 @@
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node10.html">2.1.1 General list personality</A>
+<a class="sectref" rel="prev" href="node10.html">2.1.1 General list personality</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node9.html">2.1 The General Options</A>
+<a class="sectref" rel="parent" href="node9.html">2.1 The General Options</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node12.html">2.1.3 Umbrella list settings</A>
+<a class="sectref" rel="next" href="node12.html">2.1.3 Umbrella list settings</a>
 </div>
 <hr /></div>
-</DIV>
+</div>
 <!--End of Navigation Panel-->
 
-<H3><A NAME="SECTION002212000000000000000">
-2.1.2 Reply-To header munging</A>
-</H3>
+<h3><a name="SECTION002212000000000000000">
+2.1.2 Reply-To header munging</a>
+</h3>
 
-<P>
+<p>
 This section controls what happens to the <span class="mailheader">Reply-To:</span>
 headers of messages posted through your list.
 
-<P>
+<p>
 Beware!  <span class="mailheader">Reply-To:</span> munging is considered a religious issue
 and the policies you set here can ignite some of the most heated
 off-topic flame wars on your mailing lists.  We'll try to stay as
 agnostic as possible, but our biases may still peak through.
 
-<P>
+<p>
 <span class="mailheader">Reply-To:</span> is a header that is commonly used to redirect
 replies to messages.  Exactly what happens when your uses reply to
 such a message depends on the mail readers your users use, and what
@@ -71,40 +72,40 @@ button and a ``reply to all'' button.  If people use these buttons
 correctly, you will probably never need to munge
 <span class="mailheader">Reply-To:</span>, so the default values should be fine.
 
-<P>
+<p>
 Since an informed decision is always best, here are links to two
 articles that discuss the opposing viewpoints in great detail:
 
-<P>
+<p>
 
-<UL>
-<LI><a class="ulink" href="http://www.unicom.com/pw/reply-to-harmful.html"
+<ul>
+<li><a class="ulink" href="http://www.unicom.com/pw/reply-to-harmful.html"
   >Reply-To Munging Considered
       Harmful</a>
-</LI>
-<LI><a class="ulink" href="http://www.metasystema.org/essays/reply-to-useful.mhtml"
+</li>
+<li><a class="ulink" href="http://www.metasystema.org/essays/reply-to-useful.mhtml"
   >Reply-To Munging Considered
       Useful</a>
 
-<P>
-</LI>
-</UL>
+<p>
+</li>
+</ul>
 
-<P>
+<p>
 The three options in this section work together to provide enough
 flexibility to do whatever <span class="mailheader">Reply-To:</span> munging you might
 (misguidingly :) feel you need to do.
 
-<P>
-<DL>
-<DT><STRONG>first_strip_reply_to</STRONG></DT>
-<DD>This variable controls whether any <span class="mailheader">Reply-To:</span> header
+<p>
+<dl>
+<dt><strong>first_strip_reply_to</strong></dt>
+<dd>This variable controls whether any <span class="mailheader">Reply-To:</span> header
     already present in the posted message should get removed before
     any other munging occurs.  Stripping this header will be done
     regardless of whether or not Mailman will add its own
     <span class="mailheader">Reply-To:</span> header to the message.
 
-<P>
+<p>
 If this option is set to <em>No</em>, then any existing
     <span class="mailheader">Reply-To:</span> header will be retained in the posted
     message.  If Mailman adds its own header, it will contain
@@ -113,25 +114,25 @@ If this option is set to <em>No</em>, then any existing
     message may only have one <span class="mailheader">Reply-To:</span> header, but that
     that header may contain multiple addresses.
 
-<P>
-</DD>
-<DT><STRONG>reply_goes_to_list</STRONG></DT>
-<DD>This variable controls whether Mailman will add its own
+<p>
+</dd>
+<dt><strong>reply_goes_to_list</strong></dt>
+<dd>This variable controls whether Mailman will add its own
     <span class="mailheader">Reply-To:</span> header, and if so, what the value of that
     header will be (not counting original header stripping - see
     above).
 
-<P>
+<p>
 When you set this variable to <em>Poster</em>, no additional
     <span class="mailheader">Reply-To:</span> header will be added by Mailman.  This
     setting is strongly recommended.
 
-<P>
+<p>
 When you set this variable to <em>This list</em>, a
     <span class="mailheader">Reply-To:</span> header pointing back to your list's posting
     address will be added.
 
-<P>
+<p>
 When you set this variable to <em>Explicit address</em>, the value
     of the variable <code>reply_to_address</code> (see below) will be
     added.  Note that this is one situation where
@@ -145,37 +146,37 @@ When you set this variable to <em>Explicit address</em>, the value
     header for the announce list to point to the discussion list's
     posting address.
 
-<P>
-</DD>
-<DT><STRONG>reply_to_address</STRONG></DT>
-<DD>This is the address that will be added in the
+<p>
+</dd>
+<dt><strong>reply_to_address</strong></dt>
+<dd>This is the address that will be added in the
     <span class="mailheader">Reply-To:</span> header if <code>reply_goes_to_list</code> is set
     to <em>Explicit address</em>.
 
-<P>
-</DD>
-</DL>
+<p>
+</dd>
+</dl>
 
-<P>
+<p>
 
-<DIV CLASS="navigation">
+<div class="navigation">
 <div class='online-navigation'>
 <p></p><hr />
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="2.1.1 General list personality"
+<td class='online-navigation'><a rel="prev" title="2.1.1 general list personality"
   href="node10.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="2.1 The General Options"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="2.1 the General Options"
   href="node9.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="2.1.3 Umbrella list settings"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="2.1.3 umbrella list settings"
   href="node12.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - List Administration Manual</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -183,17 +184,17 @@ When you set this variable to <em>Explicit address</em>, the value
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node10.html">2.1.1 General list personality</A>
+<a class="sectref" rel="prev" href="node10.html">2.1.1 General list personality</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node9.html">2.1 The General Options</A>
+<a class="sectref" rel="parent" href="node9.html">2.1 The General Options</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node12.html">2.1.3 Umbrella list settings</A>
+<a class="sectref" rel="next" href="node12.html">2.1.3 Umbrella list settings</a>
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on September 12, 2007.</span>
-</DIV>
+<span class="release-info">Release 2.1, documentation updated on January 4, 2010.</span>
+</div>
 <!--End of Navigation Panel-->
 
-</BODY>
-</HTML>
+</body>
+</html>

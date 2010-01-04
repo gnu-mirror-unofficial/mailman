@@ -44,10 +44,7 @@ class MMGenerator(Skeleton, Sidebar, Banner):
         p.sidebar.append((None,
                           '''<a href="http://www.python.org/"><img border=0
                           src="%(rootdir)s/images/PythonPoweredSmall.png"
-                          ></a>&nbsp;<a href="http://sourceforge.net"><img 
-                          src="http://sourceforge.net/sflogo.php?group_id=103"
-                          width="88" height="31" border="0"
-                          alt="SourceForge Logo"></a>'''
+                          ></a>'''
                           % self.__d))
         p.sidebar.append(BLANKCELL)
         thisyear = time.localtime()[0]

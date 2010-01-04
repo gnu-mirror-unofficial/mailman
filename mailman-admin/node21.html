@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="STYLESHEET" href="mailman-admin.css" type='text/css' />
-<link rel="first" href="mailman-admin.html" title='GNU Mailman - List Administration Manual' />
+<link rel="first" href="mailman-admin.html" title='GNU mailman - list Administration Manual' />
 <link rel='contents' href='contents.html' title="Contents" />
 <link rel='last' href='about.html' title='About this document...' />
 <link rel='help' href='about.html' title='About this document...' />
@@ -10,27 +10,28 @@
 <link rel="prev" href="node20.html" />
 <link rel="parent" href="node20.html" />
 <link rel="next" href="node22.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name='aesop' content='information' />
 <title>2.7.1 Subscription rules</title>
 </head>
 <body>
-<DIV CLASS="navigation">
+<div class="navigation">
 <div id='top-navigation-panel' xml:id='top-navigation-panel'>
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="2.7 The Privacy Options"
+<td class='online-navigation'><a rel="prev" title="2.7 the Privacy Options"
   href="node20.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="2.7 The Privacy Options"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="2.7 the Privacy Options"
   href="node20.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="2.7.2 Sender filters"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="2.7.2 sender filters"
   href="node22.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - List Administration Manual</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -38,29 +39,29 @@
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node20.html">2.7 The Privacy Options</A>
+<a class="sectref" rel="prev" href="node20.html">2.7 The Privacy Options</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node20.html">2.7 The Privacy Options</A>
+<a class="sectref" rel="parent" href="node20.html">2.7 The Privacy Options</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node22.html">2.7.2 Sender filters</A>
+<a class="sectref" rel="next" href="node22.html">2.7.2 Sender filters</a>
 </div>
 <hr /></div>
-</DIV>
+</div>
 <!--End of Navigation Panel-->
 
-<H3><A NAME="SECTION002271000000000000000">
-2.7.1 Subscription rules</A>
-</H3>
+<h3><a name="SECTION002271000000000000000">
+2.7.1 Subscription rules</a>
+</h3>
 
-<P>
+<p>
 This subcategory controls the rules for exposing the existance of this
 list, and for what new members must do in order to subscribe to the
 list.
 
-<P>
-<DL>
-<DT><STRONG>advertised</STRONG></DT>
-<DD>This option controls whether this list will show up in the list
+<p>
+<dl>
+<dt><strong>advertised</strong></dt>
+<dd>This option controls whether this list will show up in the list
     overview for the site.  Normally, an overview contains the name
     and short description of every mailing list in the virtual
     domain.  By setting this variable to <em>No</em>, it will not show
@@ -68,25 +69,25 @@ list.
     overview.  The only way then to find the list is to guess (or
     know!) its name.
 
-<P>
-</DD>
-<DT><STRONG>subscribe_policy</STRONG></DT>
-<DD>This option controls the steps that a new member must take to join
+<p>
+</dd>
+<dt><strong>subscribe_policy</strong></dt>
+<dd>This option controls the steps that a new member must take to join
     the list.  The available options may differ based on some defaults
     that the site administrator chooses.  They are:
 
-<P>
+<p>
 
-<UL>
-<LI>None - No verification is done on the subscribing
+<ul>
+<li>None - No verification is done on the subscribing
           member. This is also called <em>open subscriptions</em> and is
           generally disabled by default.  The site administrator must
           allow list admins to choose this option; if not, this option
           will not be presented to you.
 
-<P>
-</LI>
-<LI>Confirm - An email confirmation step is required before the
+<p>
+</li>
+<li>Confirm - An email confirmation step is required before the
           address is added to the list.  When a member requests
           subscription, either via the web page or by sending a
           message to <var>yourlist</var><code>-join@example.com</code>, Mailman
@@ -98,50 +99,50 @@ list.
           mail-back message.  The url points to a page that lets the
           user either discard or confirm their request.
 
-<P>
-</LI>
-<LI>Require approval - All subscription requests are held for
+<p>
+</li>
+<li>Require approval - All subscription requests are held for
           approval of the list moderator.  No mail-back confirmation
           is sent, but the list admins will recieve a message
           indicating that approval is pending.
 
-<P>
-</LI>
-<LI>Confirm and approve - Here, a mail-back notice must first
+<p>
+</li>
+<li>Confirm and approve - Here, a mail-back notice must first
           be confirmed by the requester.  Once confirmed, the list
           moderator must then approve the request.  This is the most
           secure method for users to subscribe since it both verifies
           the requesting address, and forces the list moderators to
           approve the request.
 
-<P>
-</LI>
-</UL>
+<p>
+</li>
+</ul>
 
-<P>
-</DD>
-<DT><STRONG>unsubscribe_policy</STRONG></DT>
-<DD>Specifies whether the list moderator's approval is required for
+<p>
+</dd>
+<dt><strong>unsubscribe_policy</strong></dt>
+<dd>Specifies whether the list moderator's approval is required for
     unsubscription requests.  <em>No</em> is highly recommended, since
     it is exceedingly impolite to not allow people to leave a mailing
     list whenever they want (i.e. opt-out).  <em>Yes</em> is useful in
     some specialized contexts; e.g. you may not want to allow
     employees to unsubscribe from the company newsletter.
 
-<P>
-</DD>
-<DT><STRONG>ban_list</STRONG></DT>
-<DD>This contains a list of addresses (or regular expressiosn), one
+<p>
+</dd>
+<dt><strong>ban_list</strong></dt>
+<dd>This contains a list of addresses (or regular expressiosn), one
     per line, that are banned from ever subscribing to your mailing
     list.  If a match occurs during the subscription process, the
     request will be automatically rejected, and the requester will get
     a rejection notice.  You can use this to permanently ban
     troublesome posters to a members-only list.
 
-<P>
-</DD>
-<DT><STRONG>private_roster</STRONG></DT>
-<DD>This specifies who is allowed to view the roster of member
+<p>
+</dd>
+<dt><strong>private_roster</strong></dt>
+<dd>This specifies who is allowed to view the roster of member
     addresses.  If you choose <em>Anyone</em>, then the list membership
     is completely public.  You can limit exposure of the roster to
     just list members, or just to the list administrators.  In the
@@ -150,36 +151,36 @@ list.
     list administrator's password must be enter; if a matching admin
     password is entered, address field is ignored.
 
-<P>
-</DD>
-<DT><STRONG>obscure_addresses</STRONG></DT>
-<DD>Controls whether some simple obfuscation of addresses is used when
+<p>
+</dd>
+<dt><strong>obscure_addresses</strong></dt>
+<dd>Controls whether some simple obfuscation of addresses is used when
     member addresses are included on web pages.  This should reduce
     the opportunity for email address harvesting by spammers, although
     it probably doesn't eliminate it.
-</DD>
-</DL>
+</dd>
+</dl>
 
-<P>
+<p>
 
-<DIV CLASS="navigation">
+<div class="navigation">
 <div class='online-navigation'>
 <p></p><hr />
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="2.7 The Privacy Options"
+<td class='online-navigation'><a rel="prev" title="2.7 the Privacy Options"
   href="node20.html"><img src='previous.png'
-  border='0' height='32'  alt='Previous Page' width='32' /></A></td>
-<td class='online-navigation'><a rel="parent" title="2.7 The Privacy Options"
+  border='0' height='32'  alt='Previous Page' width='32' /></a></td>
+<td class='online-navigation'><a rel="parent" title="2.7 the Privacy Options"
   href="node20.html"><img src='up.png'
-  border='0' height='32'  alt='Up One Level' width='32' /></A></td>
-<td class='online-navigation'><a rel="next" title="2.7.2 Sender filters"
+  border='0' height='32'  alt='Up one Level' width='32' /></a></td>
+<td class='online-navigation'><a rel="next" title="2.7.2 sender filters"
   href="node22.html"><img src='next.png'
-  border='0' height='32'  alt='Next Page' width='32' /></A></td>
+  border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - List Administration Manual</td>
 <td class='online-navigation'><a rel="contents" title="Table of Contents"
   href="contents.html"><img src='contents.png'
-  border='0' height='32'  alt='Contents' width='32' /></A></td>
+  border='0' height='32'  alt='Contents' width='32' /></a></td>
 <td class='online-navigation'><img src='blank.png'
   border='0' height='32'  alt='' width='32' /></td>
 <td class='online-navigation'><img src='blank.png'
@@ -187,17 +188,17 @@ list.
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node20.html">2.7 The Privacy Options</A>
+<a class="sectref" rel="prev" href="node20.html">2.7 The Privacy Options</a>
 <b class="navlabel">Up:</b>
-<a class="sectref" rel="parent" href="node20.html">2.7 The Privacy Options</A>
+<a class="sectref" rel="parent" href="node20.html">2.7 The Privacy Options</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node22.html">2.7.2 Sender filters</A>
+<a class="sectref" rel="next" href="node22.html">2.7.2 Sender filters</a>
 </div>
 </div>
 <hr />
-<span class="release-info">Release 2.1, documentation updated on September 12, 2007.</span>
-</DIV>
+<span class="release-info">Release 2.1, documentation updated on January 4, 2010.</span>
+</div>
 <!--End of Navigation Panel-->
 
-</BODY>
-</HTML>
+</body>
+</html>

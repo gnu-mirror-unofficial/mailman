@@ -5,27 +5,27 @@
 <link rel="first" href="mailman-install.html" title='GNU mailman - installation Manual' />
 <link rel='last' href='about.html' title='About this document...' />
 <link rel='help' href='about.html' title='About this document...' />
-<link rel="next" href="node45.html" />
-<link rel="prev" href="node43.html" />
+<link rel="next" href="node41.html" />
+<link rel="prev" href="customizing.html" />
 <link rel="parent" href="front.html" />
-<link rel="next" href="node45.html" />
+<link rel="next" href="node41.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name='aesop' content='information' />
-<title>12 Create the site password</title>
+<title>8 Create a site-wide mailing list</title>
 </head>
 <body>
 <div class="navigation">
 <div id='top-navigation-panel' xml:id='top-navigation-panel'>
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="11 check the hostname"
-  href="node43.html"><img src='previous.png'
+<td class='online-navigation'><a rel="prev" title="7 review your site"
+  href="customizing.html"><img src='previous.png'
   border='0' height='32'  alt='Previous Page' width='32' /></a></td>
 <td class='online-navigation'><a rel="parent" title="Front Matter"
   href="front.html"><img src='up.png'
   border='0' height='32'  alt='Up one Level' width='32' /></a></td>
-<td class='online-navigation'><a rel="next" title="13 create your first"
-  href="node45.html"><img src='next.png'
+<td class='online-navigation'><a rel="next" title="9 set up cron"
+  href="node41.html"><img src='next.png'
   border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - Installation Manual</td>
 <td class='online-navigation'><img src='blank.png'
@@ -37,54 +37,57 @@
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node43.html">11 Check the hostname</a>
+<a class="sectref" rel="prev" href="customizing.html">7 Review your site</a>
 <b class="navlabel">Up:</b>
 <a class="sectref" rel="parent" href="front.html">Front Matter</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node45.html">13 Create your first</a>
+<a class="sectref" rel="next" href="node41.html">9 Set up cron</a>
 </div>
 <hr /></div>
 </div>
 <!--End of Navigation Panel-->
 
-<h1><a name="SECTION0011200000000000000000">
-12 Create the site password</a>
+<h1><a name="SECTION001800000000000000000"></a><a name="site-list"></a>
+<br>
+8 Create a site-wide mailing list
 </h1>
 
 <p>
-There are two site-wide passwords that you can create from the command line,
-using the <b class="program">bin/mmsitepass</b> script.  The first is the ``site password''
-which can be used anywhere a password is required in the system.  The site
-password will get you into the administration page for any list, and it can be
-used to log in as any user.  Think <code>root</code> for a Unix system, so pick this
-password wisely!
-
-<p>
-The second password is a site-wide ``list creator'' password.  You can use
-this to delegate the ability to create new mailing lists without providing all
-the privileges of the site password.  Of course, the owner of the site
-password can also create new mailing lists, but the list creator password is
-limited to just that special role.
-
-<p>
-To set the site password, use this command:
+After you have completed the integration of Mailman and your mail server, you
+need to create a ``site-wide'' mailing list.  This is the one that password
+reminders will appear to come from, and it is required for proper Mailman
+operation.  Usually this should be a list called <code>mailman</code>, but if you
+need to change this, be sure to change the <var>MAILMAN_SITE_LIST</var> variable in
+<span class="file">mm_cfg.py</span>.  You can create the site list with this command, following
+the prompts:
 
 <p>
 <div class="verbatim"><pre>
-    % $prefix/bin/mmsitepass &lt;your-site-password&gt;
+    % bin/newlist mailman
 </pre></div>
 
 <p>
-To set the list creator password, use this command:
+Now configure your site list.  There is a convenient template for a generic
+site list in the installation directory, under <span class="file">data/sitelist.cfg</span> which
+can help you with this.  You should review the configuration options in the
+template, but note that any options not named in the <span class="file">sitelist.cfg</span> file
+won't be changed.
+
+<p>
+The template can be applied to your site list by
+running:
 
 <p>
 <div class="verbatim"><pre>
-    % $prefix/bin/mmsitepass -c &lt;list-creator-password&gt;
+    % bin/config_list -i data/sitelist.cfg mailman
 </pre></div>
 
 <p>
-It is okay not to set a list creator password, but you probably do want a site
-password.
+After applying the <span class="file">sitelist.cfg</span> options, be sure you review the
+site list's configuration via the admin pages.
+
+<p>
+You should also subscribe yourself to the site list.
 
 <p>
 
@@ -93,14 +96,14 @@ password.
 <p></p><hr />
 <table align="center" width="100%" cellpadding="0" cellspacing="2">
 <tr>
-<td class='online-navigation'><a rel="prev" title="11 check the hostname"
-  href="node43.html"><img src='previous.png'
+<td class='online-navigation'><a rel="prev" title="7 review your site"
+  href="customizing.html"><img src='previous.png'
   border='0' height='32'  alt='Previous Page' width='32' /></a></td>
 <td class='online-navigation'><a rel="parent" title="Front Matter"
   href="front.html"><img src='up.png'
   border='0' height='32'  alt='Up one Level' width='32' /></a></td>
-<td class='online-navigation'><a rel="next" title="13 create your first"
-  href="node45.html"><img src='next.png'
+<td class='online-navigation'><a rel="next" title="9 set up cron"
+  href="node41.html"><img src='next.png'
   border='0' height='32'  alt='Next Page' width='32' /></a></td>
 <td align="center" width="100%">GNU Mailman - Installation Manual</td>
 <td class='online-navigation'><img src='blank.png'
@@ -112,11 +115,11 @@ password.
 </tr></table>
 <div class='online-navigation'>
 <b class="navlabel">Previous:</b>
-<a class="sectref" rel="prev" href="node43.html">11 Check the hostname</a>
+<a class="sectref" rel="prev" href="customizing.html">7 Review your site</a>
 <b class="navlabel">Up:</b>
 <a class="sectref" rel="parent" href="front.html">Front Matter</a>
 <b class="navlabel">Next:</b>
-<a class="sectref" rel="next" href="node45.html">13 Create your first</a>
+<a class="sectref" rel="next" href="node41.html">9 Set up cron</a>
 </div>
 </div>
 <hr />

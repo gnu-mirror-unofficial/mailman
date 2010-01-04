@@ -18,7 +18,17 @@ GENERATED_HTML= $(SOURCES:.ht=.html)
 .ht.html:
 	$(HT2HTML) $(HTFLAGS) $(HTRELDIR)/$<
 
-all: $(TARGETS)
+all: $(TARGETS) mailman.html
+
+mailman.html: index.html
+	cp index.html mailman.html
+
+docs:
+	cp ../doc/.-admin/*.html ../doc/.-admin/*.png ../doc/.-admin/*.css mailman-admin/
+	cp ../doc/.-install/*.html ../doc/.-install/*.png ../doc/.-install/*.css mailman-install/
+	cp ../doc/.-member/*.html ../doc/.-member/*.png ../doc/.-member/*.css mailman-member/
+	cp ../doc/.-member-es/*.html ../doc/.-member-es/*.png ../doc/.-member-es/*.css mailman-member-es/
+	cp ../doc/*.dvi ../doc/*.pdf ../doc/mailman*.ps ../doc/*.txt .
 
 install:
 	-rsync $(RSYNC_ARGS) . www.list.org:mailman.list.org
