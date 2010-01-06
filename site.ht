@@ -7,10 +7,11 @@ Links: links.h doco-links.h
 Manual</a> describes how to build and install Mailman.  It contains general
 instructions, as well as specific details for various platforms, mail, and web
 servers.  It is also available in
-<a href="mailman-install.pdf">PDF format</a> (approx. 110k),
-<a href="mailman-install.ps">PostScript format</a>, (approx. 129k),
+<a href="mailman-install.dvi">DVI format</a> (approx. 102k),
+<a href="mailman-install.pdf">PDF format</a> (approx. 218k),
+<a href="mailman-install.ps">PostScript format</a>, (approx. 134k),
 and
-<a href="mailman-install.txt">plain text format</a> (approx. 63k).
+<a href="mailman-install.txt">plain text format</a> (approx. 69k).
 
 <p>By definition, the site administrator has shell access to the Mailman
 installation, and the proper permissions for total control over Mailman at the
