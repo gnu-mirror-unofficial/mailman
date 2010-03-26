@@ -78,7 +78,7 @@ Mailman developers.
     <li><a href="http://www.blumenversender.com">Blumenversand</a> for their
         support of Mailman development through our directed donation program.
     <li>the
-    <a href="http://bazaar.launchpad.net/~mailman-coders/mailman/3.0/annotate/head:/docs/ACKNOWLEDGMENTS.txt"
+    <a href="http://bazaar.launchpad.net/~mailman-coders/mailman/3.0/annotate/head%3A/src/mailman/docs/ACKNOWLEDGMENTS.txt"
     >list of contributors</a>, bug hunters, big idea people, and others
     who have helped immensely with Mailman's development
 </ul>
