@@ -72,7 +72,7 @@ entire article is permitted in any medium, provided this notice is preserved.
         return '''
 <center>
     <a href="%(rootdir)s/index.html">
-    <img border=0 src="%(rootdir)s/images/logo-70.jpg"></a></center>''' \
+    <img border=0 src="%(rootdir)s/images/logo2010.png"></a></center>''' \
     % self.__d
 
     def get_corner_bgcolor(self):
