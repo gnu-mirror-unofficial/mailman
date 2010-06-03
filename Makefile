@@ -31,7 +31,7 @@ docs:
 	cp ../doc/*.dvi ../doc/*.pdf ../doc/mailman*.ps ../doc/*.txt .
 
 install:
-	-rsync $(RSYNC_ARGS) . www.list.org:mailman.list.org
+	-rsync $(RSYNC_ARGS) . $(USER)@www.list.org:mailman.list.org
 	-rsync $(RSYNC_ARGS) . $(USER),mailman@web.sourceforge.net:htdocs/
 	-rsync $(RSYNC_ARGS) . $(HOME)/projects/mailman-gnu
 
