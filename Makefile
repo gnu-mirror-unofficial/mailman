@@ -31,9 +31,10 @@ docs:
 	cp ../doc/*.dvi ../doc/*.pdf ../doc/mailman*.ps ../doc/*.txt .
 
 install:
-	-rsync $(RSYNC_ARGS) . $(USER)@www.list.org:mailman.list.org
-	-rsync $(RSYNC_ARGS) . $(USER),mailman@web.sourceforge.net:htdocs/
+	-rsync $(RSYNC_ARGS) . $(USER)@www.list.org:www.list.org
+	-rsync $(RSYNC_ARGS) . bwarsaw,mailman@web.sourceforge.net:htdocs/
 	-rsync $(RSYNC_ARGS) . $(HOME)/projects/mailman-gnu
+	-rsync $(RSYNC_ARGS) . $(USER)@anthem.wooz.org:/var/www/listorg/
 
 clean:
 	-rm $(GENERATED_HTML)

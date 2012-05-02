@@ -33,9 +33,14 @@ referencing, here are the keys we use to sign releases:
     <th>Notes</th>
 </tr>
 <tr><td>Barry&nbsp;Warsaw</td>
+    <td><code>A74B06BF</code></td>
+    <td><code>8417&nbsp;157E&nbsp;DBE7&nbsp;3D9E&nbsp;AC1E&nbsp;&nbsp;539B&nbsp;126E&nbsp;B563&nbsp;A74B&nbsp;06BF</code></td>
+    <td>4096 bit GPG v4 key used to sign all newer Mailman 3 releases</td>
+</tr>
+<tr><td>Barry&nbsp;Warsaw</td>
     <td><code>EA5BBD71</code></td>
     <td><code>DBBF&nbsp;2EEB&nbsp;F925&nbsp;FAAD&nbsp;CF1F&nbsp;&nbsp;3FFF&nbsp;D986&nbsp;6941&nbsp;EA5B&nbsp;BD71</code></td>
-    <td>Newer GPG v4 key used to sign all Mailman 3 releases</td>
+    <td>Older key used to sign some older Mailman 3 releases</td>
 </tr>
 <tr><td>Barry&nbsp;Warsaw</td>
     <td><code>ED9D77D5</code></td>
